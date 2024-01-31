@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Radical extends Model
 {
     use HasFactory;
+
+    protected $table = 'radicals';
 }

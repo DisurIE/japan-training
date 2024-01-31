@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class KanjiRadical extends Model
 {
     use HasFactory;
+
+    protected $table = 'kanji_radicals';
 }
