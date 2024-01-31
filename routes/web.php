@@ -8,8 +8,11 @@ use Inertia\Inertia;
 
 
 Route::get('/', function () {
-    return Inertia::render('Main');
+    return Inertia::render('Main', [
+        'kanjis' => getKanjiFromJson('kanjis.json')
+    ]);
 });
+
 
 Route::get('/kanjis', function (Kanji $kanjis) {
     return Inertia::render('Kanjis', [
