@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Models\Kanji;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -10,12 +11,16 @@ Route::get('/', function () {
     return Inertia::render('Main');
 });
 
-Route::get('/kanjis', function () {
-    return Inertia::render('Kanjis');
+Route::get('/kanjis', function (Kanji $kanjis) {
+    return Inertia::render('Kanjis', [
+        'kanjis' => $kanjis->all()
+    ]);
 })->name('kanjis.index');
 
-Route::get('/kanjis/{kanji}', function () {
-    return Inertia::render('KanjisShow');
+Route::get('/kanjis/{kanji}', function (Kanji $kanji) {
+    return Inertia::render('KanjisShow', [
+        'kanji' => $kanji
+    ]);
 })->name('kanjis.show');
 
 Route::get('/radicals', function () {
