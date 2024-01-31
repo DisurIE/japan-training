@@ -17,16 +17,11 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Main', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return Inertia::render('Main');
 });
 
 Route::get('/kanjis', function () {
-    return Inertia::render('Kanji');
+    return Inertia::render('Kanjis');
 })->name('kanjis');
 
 Route::get('/dashboard', function () {

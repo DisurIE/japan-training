@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Kanji" />
+    <Head title="Main" />
 
     <h1>Main</h1>
 
