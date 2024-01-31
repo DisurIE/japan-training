@@ -18,8 +18,8 @@ return new class extends Migration
             $table->index('kanji_id', 'kanji_radical_kanji_idx');
             $table->index('radical_id', 'kanji_radical_radical_idx');
 
-            $table->foreign('kanji_id', 'kanji_radical_kanji_fk')->on('kanji')->references('id');
-            $table->foreign('radical_id', 'kanji_radical_radical_fk')->on('radical')->references('id');
+            $table->foreign('kanji_id', 'kanji_radical_kanji_fk')->on('kanjis')->references('id');
+            $table->foreign('radical_id', 'kanji_radical_radical_fk')->on('radicals')->references('id');
         });
     }
 
