@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Kanji;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -13,10 +14,17 @@ use Inertia\Response;
 
 class KanjiController extends Controller
 {
-    public function index()
+    public function index(Kanji $kanjis)
     {
-        return Inertia::render('Main', [
-            'kanjis' => ''
+        return Inertia::render('Kanjis', [
+            'kanjis' => $kanjis->all()
+        ]);
+    }
+
+    public function show(Kanji $kanji)
+    {
+        return Inertia::render('KanjisShow', [
+            'kanji' => $kanji
         ]);
     }
 }

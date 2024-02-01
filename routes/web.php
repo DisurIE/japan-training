@@ -10,18 +10,9 @@ use Inertia\Inertia;
 
 Route::get('/', [Ctr\MainController::class, 'index'])->name('main.index');
 
+Route::get('/kanjis', [Ctr\KanjiController::class, 'index'])->name('kanjis.index');
+Route::get('/kanjis/{kanji}', [Ctr\KanjiController::class, 'show'])->name('kanjis.show');
 
-Route::get('/kanjis', function (Kanji $kanjis) {
-    return Inertia::render('Kanjis', [
-        'kanjis' => $kanjis->all()
-    ]);
-})->name('kanjis.index');
-
-Route::get('/kanjis/{kanji}', function (Kanji $kanji) {
-    return Inertia::render('KanjisShow', [
-        'kanji' => $kanji
-    ]);
-})->name('kanjis.show');
 
 Route::get('/radicals', function () {
     return Inertia::render('Radicals');
