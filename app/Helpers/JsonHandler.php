@@ -5,7 +5,7 @@ use App\Models\Kanji;
 use Illuminate\Support\Facades\File;
 class JsonHandler
 {
-    public static function getKanjisFromJson(string $path)
+    public static function addKanjisToDatabaseFromJson(string $path)
     {
         $contents = File::get(base_path($path));
         $json = json_decode($contents, true);
