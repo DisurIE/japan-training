@@ -14,6 +14,7 @@ Route::get('/kanjis', [Ctr\KanjiController::class, 'index'])->name('kanjis.index
 Route::get('/kanjis/{kanji}', [Ctr\KanjiController::class, 'show'])->name('kanjis.show');
 
 
+
 Route::get('/radicals', function () {
     return Inertia::render('Radicals');
 })->name('radicals.index');
