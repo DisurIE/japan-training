@@ -1,18 +1,14 @@
 <?php
 
 use App\Helpers\JsonHandler;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Kanji;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-
-Route::get('/', function () {
-    return Inertia::render('Main', [
-        'kanjis' => ''
-    ]);
-});
+Route::get('/', [MainController::class, 'index'])->name('main.index');
 
 
 Route::get('/kanjis', function (Kanji $kanjis) {
