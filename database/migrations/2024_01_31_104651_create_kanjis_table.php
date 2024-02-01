@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('onyomi');
             $table->string('kunyomi');
             $table->string('important_reading');
-            $table->unsignedTinyInteger('level');
+            $table->unsignedTinyInteger('level')->nullable();
             $table->timestamps();
         });
     }

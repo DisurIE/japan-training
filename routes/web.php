@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\JsonHandler;
 use App\Http\Controllers\ProfileController;
 use App\Models\Kanji;
 use Illuminate\Foundation\Application;
@@ -9,7 +10,7 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Main', [
-        'kanjis' => getKanjiFromJson('kanjis.json')
+        'kanjis' => ''
     ]);
 });
 
