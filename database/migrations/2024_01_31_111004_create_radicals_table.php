@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('character');
             $table->string('meaning');
-            $table->string('image');
-            $table->unsignedTinyInteger('level');
+            $table->string('image')->nullable();
+            $table->unsignedTinyInteger('level')->nullable();
             $table->timestamps();
         });
     }
