@@ -17,15 +17,7 @@ class HiraganaKatakanaController extends Controller
 {
     public function index(Radical $radicals)
     {
-        return Inertia::render('Radicals', [
-            'radicals' => $radicals->all()
-        ]);
+        return Inertia::render('HiraganaKatakana');
     }
 
-    public function show(Radical $radical)
-    {
-        return Inertia::render('RadicalShow', [
-            'radical' => $radical
-        ]);
-    }
 }
