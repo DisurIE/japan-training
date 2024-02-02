@@ -21,7 +21,7 @@ Route::get('/radicals', function () {
 
 Route::get('/radicals/{radical}', function () {
     return Inertia::render('RadicalsShow');
-})->name('radicals.index');
+})->name('radicals.show');
 
 //Route::get('/dashboard', function () {
 //    return Inertia::render('Dashboard');
