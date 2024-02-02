@@ -1,6 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 import NavLink from "@/Components/NavLink.vue";
+import HeaderComponent from "@/Components/HeaderComponent.vue";
 
 defineProps({
     kanjis: Array,
@@ -9,6 +10,7 @@ defineProps({
 </script>
 
 <template>
+    <HeaderComponent/>
     <Layout>
         <Head title="Kanjis" />
         <div class="container mx-auto pr-4 pl-4">

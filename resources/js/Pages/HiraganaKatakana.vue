@@ -1,8 +1,10 @@
 <script setup>
 
+import HeaderComponent from "@/Components/HeaderComponent.vue";
 </script>
 
 <template>
+    <HeaderComponent/>
     <div class="container mx-auto">
         <h1 class="text-3xl font-semibold mb-6">Hiragana Table</h1>
 
