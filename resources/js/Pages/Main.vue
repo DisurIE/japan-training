@@ -10,9 +10,8 @@ defineProps({
 </script>
 
 <template>
-    <HeaderComponent/>
-    <NavLink :href="route('kanjis.index')" :active="route().current('kanjis.index')">Kanjis</NavLink>
     <Head title="Main" />
+    <HeaderComponent/>
 
     <h1>Main</h1>
 
