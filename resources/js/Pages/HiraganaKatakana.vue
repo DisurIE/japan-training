@@ -6,7 +6,7 @@ import HiraganaKatakanaComponent from "@/Components/HiraganaKatakanaComponent.vu
 
 <template>
     <HeaderComponent/>
-    <hiragana-katakana-component/>
+    <HiraganaKatakanaComponent/>
 </template>
 
 <style scoped>
