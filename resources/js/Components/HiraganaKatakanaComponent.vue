@@ -41,8 +41,10 @@ export default {
             <table class=" text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
 
                 <tbody>
-                <tr v-for="row in currentAlphabet">
-                    <td v-for="character in row" class="text-black border-2 border-gray-100 text-center text-3xl p-1">{{character}}</td>
+                <tr v-for="colIndex in 5" :key="colIndex">
+                    <td v-for="row in currentAlphabet" :key="row[colIndex - 1]" class="text-black border-2 border-gray-100 text-center text-3xl p-1">
+                        {{ row[colIndex - 1] }}
+                    </td>
                 </tr>
 
                 </tbody>
