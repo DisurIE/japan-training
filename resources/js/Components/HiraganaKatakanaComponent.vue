@@ -57,8 +57,13 @@ export default {
                     <td v-for="row in currentAlphabet" :key="row[colIndex - 1]" class="text-black border-2 border-gray-100 text-center text-3xl p-1">
                         {{ row[colIndex - 1] }}
                     </td>
-                </tr>
 
+                </tr>
+                <tr>
+                    <td class="text-center" v-for="rowIndex in currentAlphabet.length">
+                        <input type="checkbox" v-bind:id="'#column' + rowIndex">
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>
