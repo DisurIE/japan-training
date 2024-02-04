@@ -29,16 +29,24 @@ export default {
                 ['ワ', ' ', ' ', ' ', 'ヲ'],
                 ['ン', ' ', ' ', ' ', ' ',]
             ],
+            activeHiraganaCharacters: [],
+            activeKatakanaCharacters: [],
         };
     },
     computed: {
         currentAlphabet() {
             return this.isHiragana ? this.hiraganaCharacters : this.katakanaCharacters;
         },
+        activeAlphabet() {
+            return this.isHiragana ? this.activeHiraganaCharacters : this.activeKatakanaCharacters;
+        }
     },
     methods: {
         toggleAlphabet() {
             this.isHiragana = !this.isHiragana;
+        },
+        markCheckbox(i){
+
         },
     },
 };
@@ -57,11 +65,11 @@ export default {
                     <td v-for="row in currentAlphabet" :key="row[colIndex - 1]" class="text-black border-2 border-gray-100 text-center text-3xl p-1">
                         {{ row[colIndex - 1] }}
                     </td>
-
                 </tr>
+
                 <tr>
                     <td class="text-center" v-for="rowIndex in currentAlphabet.length">
-                        <input type="checkbox" v-bind:id="'#column' + rowIndex">
+                        <input @onclick="markCheckbox(rowIndex)" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
                     </td>
                 </tr>
                 </tbody>
@@ -69,6 +77,7 @@ export default {
         </div>
 
         <button @click="toggleAlphabet">Переключить алфавит</button>
+        <button>Начать</button>
     </div>
 </template>
 
