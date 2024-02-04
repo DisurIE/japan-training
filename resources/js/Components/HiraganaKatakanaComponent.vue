@@ -3,6 +3,11 @@ export default {
     data() {
         return {
             isHiragana: true,
+            visibility: true,
+            mean: '',
+            meanInput: '',
+            chr: '',
+            inc: 0,
             hiraganaCharacters: [
                 ['あ', 'い', 'う', 'え', 'お'],
                 ['か', 'き', 'く', 'け', 'こ'],
@@ -29,8 +34,22 @@ export default {
                 ['ワ', ' ', ' ', ' ', 'ヲ'],
                 ['ン', ' ', ' ', ' ', ' ',]
             ],
+            meaningCharacters: [
+                ['a', 'i', 'u', 'e', 'o'],
+                ['ka', 'ki', 'ku', 'ke', 'ko'],
+                ['sa', 'shi', 'su', 'se', 'so'],
+                ['ta', 'chi', 'tsu', 'te', 'to'],
+                ['na', 'ni', 'nu', 'ne', 'no'],
+                ['ha', 'hi', 'fu', 'he', 'ho'],
+                ['ma', 'mi', 'mu', 'me', 'mo'],
+                ['ya', ' ', 'yu', ' ', 'yo'],
+                ['ra', 'ri', 'ru', 're', 'ro'],
+                ['wa', ' ', ' ', ' ', 'wo'],
+                ['ン', ' ', ' ', ' ', ' ',]
+            ],
             activeHiraganaCharacters: [],
             activeKatakanaCharacters: [],
+            activeMeaningCharacters: [],
         };
     },
     computed: {
@@ -42,18 +61,25 @@ export default {
         }
     },
     methods: {
+        changeVisibility(){
+            document.querySelector('.training').classList.remove('hidden');
+            this.visibility = false;
+        },
         toggleAlphabet() {
             this.isHiragana = !this.isHiragana;
         },
         markCheckbox(e){
                 let currentHiraganaArr = this.hiraganaCharacters[e.target._value - 1];
                 let currentKatakanaArr = this.katakanaCharacters[e.target._value - 1];
+                let currentMeaningArr = this.meaningCharacters[e.target._value - 1];
                 if(e.target.checked) {
                     this.activeHiraganaCharacters = [...this.activeHiraganaCharacters, ...this.hiraganaCharacters[e.target._value - 1]].filter((character) => character !== ' ');
                     this.activeKatakanaCharacters = [...this.activeKatakanaCharacters, ...this.katakanaCharacters[e.target._value - 1]].filter((character) => character !== ' ');
+                    this.activeMeaningCharacters = [...this.activeMeaningCharacters, ...this.meaningCharacters[e.target._value - 1]].filter((character) => character !== ' ');
 
                     console.log(this.activeHiraganaCharacters);
                     console.log(this.activeKatakanaCharacters);
+                    console.log(this.activeMeaningCharacters);
                 }
                 else{
                     this.activeHiraganaCharacters = this.activeHiraganaCharacters.filter( function( el ) {
@@ -62,20 +88,37 @@ export default {
                     this.activeKatakanaCharacters = this.activeKatakanaCharacters.filter( function( el ) {
                         return !currentKatakanaArr.includes( el );
                     } );
+                    this.activeMeaningCharacters = this.activeMeaningCharacters.filter( function( el ) {
+                        return !currentMeaningArr.includes( el );
+                    } );
                     console.log(this.activeHiraganaCharacters);
                     console.log(this.activeKatakanaCharacters);
+                    console.log(this.activeMeaningCharacters);
                 }
         },
+        checkMeaning(arr){
+
+            if(this.mean === this.meanInput){
+                this.inc++;
+                this.takeRandomChr(this.activeAlphabet);
+                this.meanInput = '';
+            }
+        },
+        takeRandomChr(arr){
+
+            let rand = Math.floor(Math.random() * arr.length);
+            console.log(rand);
+            this.chr = arr[rand]
+            this.mean = this.activeMeaningCharacters[rand]
+        }
     },
 };
 
 </script>
 
 <template>
-    <div>
-
-
-        <div class="px-2 py-3 w-auto flex justify-center">
+    <div v-if="visibility">
+        <div v-if="visibility" class="px-2 py-3 w-auto flex justify-center">
             <table class=" text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
 
                 <tbody>
@@ -95,7 +138,13 @@ export default {
         </div>
 
         <button @click="toggleAlphabet">Переключить алфавит</button>
-        <button>Начать</button>
+        <button @click="changeVisibility(); takeRandomChr(activeAlphabet)">Начать</button>
+    </div>
+    <div class="hidden training">
+        <div class="character text-7xl">{{chr}}</div>
+        <div class="meaning text-7xl">{{mean}}</div>
+        <div class="inc">{{inc}}</div>
+        <input v-model:="meanInput" class="input-meaning" @input="checkMeaning(activeAlphabet)" placeholder="Введите значение " type="text">
     </div>
 </template>
 
