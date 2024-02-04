@@ -45,8 +45,18 @@ export default {
         toggleAlphabet() {
             this.isHiragana = !this.isHiragana;
         },
-        markCheckbox(i){
-
+        markCheckbox(e){
+                let currentArr = this.hiraganaCharacters[e.target._value - 1];
+                if(e.target.checked) {
+                    this.activeHiraganaCharacters = [...this.activeHiraganaCharacters, ...this.hiraganaCharacters[e.target._value - 1]]
+                    console.log(this.activeHiraganaCharacters);
+                }
+                else{
+                    this.activeHiraganaCharacters = this.activeHiraganaCharacters.filter( function( el ) {
+                        return !currentArr.includes( el );
+                    } );
+                    console.log(this.activeHiraganaCharacters);
+                }
         },
     },
 };
@@ -69,7 +79,7 @@ export default {
 
                 <tr>
                     <td class="text-center" v-for="rowIndex in currentAlphabet.length">
-                        <input @onclick="markCheckbox(rowIndex)" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
+                        <input @change="markCheckbox" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
                     </td>
                 </tr>
                 </tbody>
