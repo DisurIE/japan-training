@@ -46,16 +46,24 @@ export default {
             this.isHiragana = !this.isHiragana;
         },
         markCheckbox(e){
-                let currentArr = this.hiraganaCharacters[e.target._value - 1];
+                let currentHiraganaArr = this.hiraganaCharacters[e.target._value - 1];
+                let currentKatakanaArr = this.katakanaCharacters[e.target._value - 1];
                 if(e.target.checked) {
-                    this.activeHiraganaCharacters = [...this.activeHiraganaCharacters, ...this.hiraganaCharacters[e.target._value - 1]]
+                    this.activeHiraganaCharacters = [...this.activeHiraganaCharacters, ...this.hiraganaCharacters[e.target._value - 1]].filter((character) => character !== ' ');
+                    this.activeKatakanaCharacters = [...this.activeKatakanaCharacters, ...this.katakanaCharacters[e.target._value - 1]].filter((character) => character !== ' ');
+
                     console.log(this.activeHiraganaCharacters);
+                    console.log(this.activeKatakanaCharacters);
                 }
                 else{
                     this.activeHiraganaCharacters = this.activeHiraganaCharacters.filter( function( el ) {
-                        return !currentArr.includes( el );
+                        return !currentHiraganaArr.includes( el );
+                    } );
+                    this.activeKatakanaCharacters = this.activeKatakanaCharacters.filter( function( el ) {
+                        return !currentKatakanaArr.includes( el );
                     } );
                     console.log(this.activeHiraganaCharacters);
+                    console.log(this.activeKatakanaCharacters);
                 }
         },
     },
