@@ -142,7 +142,7 @@ export default {
     </div>
     <div class="hidden training">
         <div class="character text-7xl">{{chr}}</div>
-        <div class="meaning text-7xl">{{mean}}</div>
+<!--        <div class="meaning text-7xl">{{mean}}</div>-->
         <div class="inc">{{inc}}</div>
         <input v-model:="meanInput" class="input-meaning" @input="checkMeaning(activeAlphabet)" placeholder="Введите значение " type="text">
     </div>
