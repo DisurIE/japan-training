@@ -96,6 +96,13 @@ export default {
                     console.log(this.activeMeaningCharacters);
                 }
         },
+        markAllCheckbox(){
+            let $checkboxes = document.querySelectorAll("input");
+            $checkboxes.forEach((item, index) => {
+                item.checked = true;
+
+            });
+        },
         checkMeaning(arr){
 
             if(this.mean === this.meanInput){
@@ -130,15 +137,17 @@ export default {
 
                 <tr>
                     <td class="text-center" v-for="rowIndex in currentAlphabet.length">
-                        <input @change="markCheckbox" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
+                        <input class="checkbox-hiraganakatakana" @input="markCheckbox" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-
-        <button @click="toggleAlphabet">Переключить алфавит</button>
-        <button @click="changeVisibility(); takeRandomChr(activeAlphabet)">Начать</button>
+        <div class="content-center w-auto flex justify-center gap-3">
+            <button class="bg-gray-200 p-1.5 rounded" @click="toggleAlphabet">Переключить алфавит</button>
+            <button class="bg-gray-200 p-1.5 rounded" @click="changeVisibility(); takeRandomChr(activeAlphabet)">Начать</button>
+            <button class="bg-gray-200 p-1.5 rounded" @click="markAllCheckbox">выбрать все</button>
+        </div>
     </div>
     <div class="hidden training">
         <div class="character text-7xl">{{chr}}</div>
