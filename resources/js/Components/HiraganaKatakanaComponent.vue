@@ -45,7 +45,7 @@ export default {
                 ['ya', ' ', 'yu', ' ', 'yo'],
                 ['ra', 'ri', 'ru', 're', 'ro'],
                 ['wa', ' ', ' ', ' ', 'wo'],
-                ['ン', ' ', ' ', ' ', ' ',]
+                ['n', ' ', ' ', ' ', ' ',]
             ],
             activeHiraganaCharacters: [],
             activeKatakanaCharacters: [],
@@ -98,10 +98,7 @@ export default {
         },
         markAllCheckbox(){
             let $checkboxes = document.querySelectorAll("input");
-            $checkboxes.forEach((item, index) => {
-                item.checked = true;
-
-            });
+            $checkboxes.forEach( (e) => e.click());
         },
         checkMeaning(arr){
 
@@ -137,7 +134,7 @@ export default {
 
                 <tr>
                     <td class="text-center" v-for="rowIndex in currentAlphabet.length">
-                        <input class="checkbox-hiraganakatakana" @input="markCheckbox" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
+                        <input class="checkbox-hiraganakatakana"  @input="markCheckbox" v-bind:value="rowIndex" type="checkbox" v-bind:id="'#column' + rowIndex">
                     </td>
                 </tr>
                 </tbody>
