@@ -62,8 +62,13 @@ export default {
     },
     methods: {
         changeVisibility(){
-            document.querySelector('.training').classList.remove('hidden');
-            this.visibility = false;
+            if(this.activeHiraganaCharacters.length === 0) {
+
+            }
+            else{
+                document.querySelector('.training').classList.toggle('hidden');
+                this.visibility = false
+            }
         },
         toggleAlphabet() {
             this.isHiragana = !this.isHiragana;
@@ -114,6 +119,19 @@ export default {
             console.log(rand);
             this.chr = arr[rand]
             this.mean = this.activeMeaningCharacters[rand]
+        },
+        resetAll() {
+            this.activeHiraganaCharacters = [];
+            this.activeKatakanaCharacters = [];
+            this.activeMeaningCharacters = [];
+            this.mean = '';
+            this.meanInput = '';
+            this.chr = '';
+            this.inc = 0;
+            this.visibility = true;
+            document.querySelector('.training').classList.add('hidden');
+            // Снимаем отметки с чекбоксов
+            document.querySelectorAll('.checkbox-hiraganakatakana').forEach(checkbox => checkbox.checked = false);
         }
     },
 };
@@ -146,11 +164,12 @@ export default {
             <button class="bg-gray-200 p-1.5 rounded" @click="markAllCheckbox">выбрать все</button>
         </div>
     </div>
-    <div class="hidden training">
-        <div class="character text-7xl">{{chr}}</div>
-<!--        <div class="meaning text-7xl">{{mean}}</div>-->
-        <div class="inc">{{inc}}</div>
-        <input v-model:="meanInput" class="input-meaning" @input="checkMeaning(activeAlphabet)" placeholder="Введите значение " type="text">
+    <div class="hidden training flex flex-col justify-center items-center">
+        <div class="character text-7xl">{{ chr }}</div>
+        <!-- <div class="meaning text-7xl">{{ mean }}</div> -->
+        <div class="inc">{{ inc }}</div>
+        <input v-model="meanInput" class="input-meaning mt-4 px-4 py-2 border border-gray-300 rounded-md" @input="checkMeaning(activeAlphabet)" placeholder="Введите значение" type="text">
+        <button @click="resetAll" class=" mt-2 bg-gray-200 p-1.5 rounded">Назад</button>
     </div>
 </template>
 
