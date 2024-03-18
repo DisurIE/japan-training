@@ -9,5 +9,10 @@ class Kanji extends Model
 {
     use HasFactory;
 
+    public function radicals()
+    {
+        return $this->belongsToMany(Radical::class);
+    }
+
     protected $table = 'kanjis';
 }
