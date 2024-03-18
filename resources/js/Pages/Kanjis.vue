@@ -65,7 +65,7 @@ export default {
                     <!-- Отображение кандзи для текущего уровня -->
                     <div v-for="kanji in kanjiGroup[level]" :key="kanji.id">
                         <div class="relative bg-blue-400 p-6 rounded-lg cursor-pointer overflow-hidden transition duration-300 transform hover:scale-105">
-                            <Link :href="route('kanjis.show', { id: kanji.id })">
+                            <Link :href="route('kanjis.show', { id: kanji.character })">
                                 <div class="font-bold text-6xl text-center">{{ kanji.character }}</div>
                                 <div class="absolute inset-0 bg-gray-800 text-white opacity-0 transition duration-300 hover:opacity-100">
                                     <div class="flex flex-col justify-center h-full px-4 py-2">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\JsonHandler;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Kanji;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -14,17 +15,18 @@ use Inertia\Response;
 
 class KanjiController extends Controller
 {
-    public function index(Kanji $kanjis)
+    public function index(Kanji $kanjis) : Response
     {
+        //JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
         return Inertia::render('Kanjis', [
             'kanjis' => $kanjis->all()
         ]);
     }
 
-    public function show(Kanji $kanji)
+    public function show(string $id) : Response
     {
         return Inertia::render('KanjisShow', [
-            'kanji' => $kanji
+            'kanji' => Kanji::where("character", "=" , $id)->first(),
         ]);
     }
 }
