@@ -36,7 +36,7 @@ export default {
             this.kanjis.forEach(kanji => {
                 this.levelArray.push(kanji.level);
             })
-            return [...new Set(this.levelArray)];
+            return [...new Set(this.levelArray)].sort((a,b) => a - b);
         },
         kanjiGroup: function() {
             const grouped = {};
