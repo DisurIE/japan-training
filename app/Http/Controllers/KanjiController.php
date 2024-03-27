@@ -23,9 +23,8 @@ class KanjiController extends Controller
         ]);
     }
 
-    public function show(string $id) : Response
+    public function show(Kanji $kanji) : Response
     {
-        $kanji = Kanji::where("character", "=" , $id)->first();
         return Inertia::render('KanjisShow', [
             'kanji' => $kanji,
             'radicals' => $kanji->radicals(),
