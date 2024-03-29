@@ -18,14 +18,14 @@ class KanjiController extends Controller
     public function index(Kanji $kanjis) : Response
     {
         //JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
-        return Inertia::render('Kanjis', [
+        return Inertia::render('Kanji/Kanjis', [
             'kanjis' => $kanjis->all()
         ]);
     }
 
     public function show(Kanji $kanji) : Response
     {
-        return Inertia::render('KanjisShow', [
+        return Inertia::render('Kanji/KanjisShow', [
             'kanji' => $kanji,
             'radicals' => $kanji->radicals(),
         ]);
