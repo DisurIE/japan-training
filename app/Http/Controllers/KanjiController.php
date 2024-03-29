@@ -30,4 +30,9 @@ class KanjiController extends Controller
             'radicals' => $kanji->radicals(),
         ]);
     }
+
+    public function create() : Response
+    {
+        return Inertia::render('KanjisCreate');
+    }
 }
