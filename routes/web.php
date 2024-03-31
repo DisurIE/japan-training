@@ -12,7 +12,7 @@ Route::get('/', [Ctr\MainController::class, 'index'])->name('main.index');
 
 Route::get('/kanjis', [Ctr\KanjiController::class, 'index'])->name('kanjis.index');
 Route::get('/kanjis/{kanji:character}', [Ctr\KanjiController::class, 'show'])->name('kanjis.show');
-Route::get('/kanjis/create', [Ctr\KanjiController::class, 'create'])->name('kanjis.create')->middleware('auth');
+Route::get('/kanjis/create', [Ctr\KanjiController::class, 'create'])->name('kanjis.create');
 
 Route::get('/hiragana-katakana', [Ctr\HiraganaKatakanaController::class, 'index'])->name('hiragana-katakana.index');
 
@@ -24,14 +24,14 @@ Route::get('/radicals/{radical}', function () {
     return Inertia::render('RadicalsShow');
 })->name('radicals.show');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    return Inertia::render('Dashboard');
+//})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+//Route::middleware('auth')->group(function () {
+//    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+//});
 
 require __DIR__.'/auth.php';
