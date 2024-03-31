@@ -14,6 +14,7 @@ class SendMessage extends Notification
     /**
      * Create a new notification instance.
      */
+
     public function __construct()
     {
         //
