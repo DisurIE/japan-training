@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => 'smtp',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
 
         'postmark' => [
             'transport' => 'postmark',
-            // 'message_stream_id' => null,
+            'message_stream_id' => env('POSTMARK_MESSAGE_STREAM_ID'),
             // 'client' => [
             //     'timeout' => 5,
             // ],
