@@ -11,8 +11,8 @@ use Inertia\Inertia;
 Route::get('/', [Ctr\MainController::class, 'index'])->name('main.index');
 
 Route::get('/kanjis', [Ctr\KanjiController::class, 'index'])->name('kanjis.index');
-Route::get('/kanjis/{kanji:character}', [Ctr\KanjiController::class, 'show'])->name('kanjis.show');
 Route::get('/kanjis/create', [Ctr\KanjiController::class, 'create'])->name('kanjis.create');
+Route::get('/kanjis/{kanji:character}', [Ctr\KanjiController::class, 'show'])->name('kanjis.show');
 
 Route::get('/hiragana-katakana', [Ctr\HiraganaKatakanaController::class, 'index'])->name('hiragana-katakana.index');
 
