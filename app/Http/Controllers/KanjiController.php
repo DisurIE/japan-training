@@ -35,8 +35,18 @@ class KanjiController extends Controller
     {
         return Inertia::render('Kanji/KanjisCreate');
     }
-    public function store() : Response
+    public function store(Request $request)
     {
-        return new Response();
+        $request->validate([
+            'character' => ['required', 'unique:kanjis'],
+            'meaning' => 'required',
+            'onyomi' => 'required',
+            'kunyomi' => 'required',
+            'important_reading' => 'required',
+            'level' => 'number',
+        ]);
+
+        Kanji::create($request->all());
+        return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
     }
 }
