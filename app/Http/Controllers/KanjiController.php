@@ -38,12 +38,12 @@ class KanjiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-//            'character' => ['required', 'unique:kanjis'],
-//            'meaning' => 'required',
-//            'onyomi' => 'required',
-//            'kunyomi' => 'required',
-//            'important_reading' => 'required',
-//            'level' => 'number',
+            'character' => ['required', 'unique:kanjis'],
+            'meaning' => 'required',
+            'onyomi' => 'required',
+            'kunyomi' => 'required',
+            'important_reading' => 'required',
+            'level' => ['required', 'numeric'],
         ]);
         $create = Kanji::create([
             'character' => request('character'),
@@ -53,6 +53,11 @@ class KanjiController extends Controller
             'important_reading' => request('important_reading'),
             'level' => request('level'),
         ]);
-        return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
+        if($create) {
+            return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
+        }
+        else{
+            return redirect()->route('kanjis.create')->with('error', 'Kanji not created');
+        }
     }
 }
