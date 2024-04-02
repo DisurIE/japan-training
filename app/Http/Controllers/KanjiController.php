@@ -33,6 +33,10 @@ class KanjiController extends Controller
 
     public function create() : Response
     {
-        return Inertia::render('KanjisCreate');
+        return Inertia::render('Kanji/KanjisCreate');
+    }
+    public function store() : Response
+    {
+        return new Response();
     }
 }
