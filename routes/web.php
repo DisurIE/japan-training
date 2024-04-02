@@ -14,7 +14,10 @@ Route::controller(Ctr\KanjiController::class)->group(function () {
     Route::get('/kanjis', 'index')->name('kanjis.index');
     Route::get('/kanjis/create', 'create')->name('kanjis.create');
     Route::get('/kanjis/{kanji:character}',  'show')->name('kanjis.show');
+
+    Route::post('/kanjis', 'store')->name('kanjis.store');
 });
+
 Route::get('/hiragana-katakana', [Ctr\HiraganaKatakanaController::class, 'index'])->name('hiragana-katakana.index');
 
 Route::get('/radicals', function () {

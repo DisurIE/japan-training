@@ -15,4 +15,5 @@ class Kanji extends Model
     }
 
     protected $table = 'kanjis';
+    protected $fillable = ['character', 'meaning', 'onyomi', 'kunyomi', 'important_reading', 'level'];
 }
