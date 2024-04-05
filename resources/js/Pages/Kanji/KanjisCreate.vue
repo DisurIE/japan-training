@@ -15,6 +15,8 @@ export default {
     },
     data(props) {
         let form = null;
+        let $path = null;
+        let $data = null;
         if(props.kanji !== undefined) {
             form = useForm({
                 character: props.kanji.character,
@@ -24,6 +26,16 @@ export default {
                 important_reading: props.kanji.important_reading,
                 level: props.kanji.level,
             });
+            $path = `/kanjis/${props.kanji.id}`
+            $data = {
+                _method: "put",
+                character: form.character,
+                meaning: form.meaning,
+                onyomi: form.onyomi,
+                kunyomi: form.kunyomi,
+                important_reading: form.important_reading,
+                level: form.level,
+            };
         }
         else{
             form = useForm({
@@ -34,12 +46,20 @@ export default {
                 important_reading: '',
                 level: '',
             });
+                $path = `/kanjis`
+                $data = {
+                    _method: "post",
+                    character: form.character,
+                    meaning: form.meaning,
+                    onyomi: form.onyomi,
+                    kunyomi: form.kunyomi,
+                    important_reading: form.important_reading,
+                    level: form.level,
+                }
+
         }
         const submit = () => {
-            Inertia.post(`/kanjis/${kanji.id}`, {
-                _method: "put",
-                character: form.character,
-            });
+            this.form.put($path, $data);
         };
         return {form, submit}
     },

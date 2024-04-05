@@ -70,4 +70,34 @@ class KanjiController extends Controller
         ]);
     }
 
+    public function update(Request $request) : mixed
+    {
+        //dd($request);
+        $request->validate([
+            'character' => ['required'],
+            'meaning' => 'required',
+            'onyomi' => 'required',
+            'kunyomi' => 'required',
+            'important_reading' => 'required',
+            'level' => ['required', 'numeric'],
+        ]);
+//        return abort(500);
+        $kanji = Kanji::where('character', '=', $request['character'])->first();
+        $create = $kanji->update([
+            'character' => request('character'),
+            'meaning' => request('meaning'),
+            'onyomi' => request('onyomi'),
+            'kunyomi' => request('kunyomi'),
+            'important_reading' => request('important_reading'),
+            'level' => request('level'),
+        ]);
+        if($create) {
+            return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
+        }
+        else{
+            ////////////////////////////////////////
+            return abort(500);
+        }
+    }
+
 }
