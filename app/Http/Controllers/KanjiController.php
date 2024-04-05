@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
+use function Laravel\Prompts\alert;
 
 class KanjiController extends Controller
 {
@@ -35,7 +36,7 @@ class KanjiController extends Controller
     {
         return Inertia::render('Kanji/KanjisCreate');
     }
-    public function store(Request $request)
+    public function store(Request $request) : mixed
     {
         $request->validate([
             'character' => ['required', 'unique:kanjis'],
@@ -57,7 +58,16 @@ class KanjiController extends Controller
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
         }
         else{
-            return redirect()->route('kanjis.create')->with('error', 'Kanji not created');
+            ////////////////////////////////////////
+            return alert(500);
         }
     }
+
+    public function edit(Kanji $kanji)
+    {
+        return Inertia::render('Kanji/KanjisCreate', [
+            'kanji' => $kanji,
+        ]);
+    }
+
 }
