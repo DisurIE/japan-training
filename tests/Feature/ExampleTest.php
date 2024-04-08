@@ -4,7 +4,9 @@ namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Inertia\Testing\AssertableInertia as Assert;
 class ExampleTest extends TestCase
 {
     /**
@@ -25,9 +27,14 @@ class ExampleTest extends TestCase
     public function test_the_redicrect_create_update_kanji(): void
     {
         $responseCreate = $this->get('/kanjis/create');
-        $responseUpdate = $this->get('/kanjis/edit/1');
+        $responseUpdate = $this->get('/kanjis/1/edit');
 
         $responseCreate->assertRedirect('/login');
         $responseUpdate->assertRedirect('/login');
+    }
+
+    public function test_the_kanjis_ok(): void
+    {
+        $response = $this->get('/kanjis');
     }
 }
