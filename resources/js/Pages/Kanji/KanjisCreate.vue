@@ -59,7 +59,12 @@ export default {
 
         }
         const submit = () => {
-            this.form.put($path, $data);
+            if(props.kanji !== undefined) {
+                this.form.put($path, $data);
+            }
+            else{
+                this.form.post($path, $data);
+            }
         };
         return {form, submit}
     },

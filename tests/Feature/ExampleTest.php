@@ -16,4 +16,18 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+    public function test_the_404_code(): void
+    {
+        $response = $this->get('/404');
+
+        $response->assertStatus(404);
+    }
+    public function test_the_redicrect_create_update_kanji(): void
+    {
+        $responseCreate = $this->get('/kanjis/create');
+        $responseUpdate = $this->get('/kanjis/edit/1');
+
+        $responseCreate->assertRedirect('/login');
+        $responseUpdate->assertRedirect('/login');
+    }
 }
