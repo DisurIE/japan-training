@@ -1,0 +1,1072 @@
+{
+  "一" : {
+    "strokes" : 1,
+    "meaning_reading" : "one (いち, ichi, 一)",
+    "kanjis" : "七三丈不丘世"
+  },
+  "丨" : {
+    "strokes" : 1,
+    "meaning_reading" : "line, stick (ぼう, bō, 棒)",
+    "kanjis" : "中"
+  },
+  "丶" : {
+    "strokes" : 1,
+    "meaning_reading" : "dot (てん, ten, 点)",
+    "kanjis" : "丸主"
+  },
+  "丿" : {
+    "strokes" : 1,
+    "meaning_reading" : "bend, possessive particle no (の, no, ノ)",
+    "kanjis" : "久之乎"
+  },
+  "乙 (乚)" : {
+    "strokes" : 1,
+    "meaning_reading" : "second, latter (おつ, otsu, 乙)",
+    "kanjis" : "九也"
+  },
+  "亅" : {
+    "strokes" : 1,
+    "meaning_reading" : "hook, hooked stick (はねぼう, hanebō, 撥棒)",
+    "kanjis" : "了事"
+  },
+  "二" : {
+    "strokes" : 2,
+    "meaning_reading" : "two (に, ni, 二)",
+    "kanjis" : "五井些亞"
+  },
+  "亠" : {
+    "strokes" : 2,
+    "meaning_reading" : "pot lid (なべぶた, nabebuta, 鍋蓋)",
+    "kanjis" : "亡交京"
+  },
+  "人 (亻,𠆢)" : {
+    "strokes" : 2,
+    "meaning_reading" : "human (ひと, hito, 人)",
+    "kanjis" : "仁休位今"
+  },
+  "儿" : {
+    "strokes" : 2,
+    "meaning_reading" : "legs, human underneath (にんにょう, ninnyō, 人繞)",
+    "kanjis" : "兄元"
+  },
+  "入 (𠆢)" : {
+    "strokes" : 2,
+    "meaning_reading" : "enter (いる, iru, 入)",
+    "kanjis" : "入全兩"
+  },
+  "八 (ハ)" : {
+    "strokes" : 2,
+    "meaning_reading" : "eight, eight-head (はちがしら, hachigashira, 八頭)",
+    "kanjis" : "公六共兵"
+  },
+  "冂" : {
+    "strokes" : 2,
+    "meaning_reading" : "inverted box, window frame (まきがまえ, makigamae, 牧構)",
+    "kanjis" : "内再"
+  },
+  "冖" : {
+    "strokes" : 2,
+    "meaning_reading" : "cover, wa crown (わかんむり, wakanmuri, ワ冠)",
+    "kanjis" : "冗冠"
+  },
+  "冫" : {
+    "strokes" : 2,
+    "meaning_reading" : "ice, 2-stroke water (にすい, nisui, 二水)",
+    "kanjis" : "冬冶冷凍"
+  },
+  "几" : {
+    "strokes" : 2,
+    "meaning_reading" : "desk (つくえ, tsukue, 机)",
+    "kanjis" : "凡"
+  },
+  "凵" : {
+    "strokes" : 2,
+    "meaning_reading" : "container, inbox (うけばこ, ukebako, 受け箱)",
+    "kanjis" : "凶出函"
+  },
+  "刀 (刂,⺈)" : {
+    "strokes" : 2,
+    "meaning_reading" : "sword (かたな, katana, 刀)",
+    "kanjis" : "刀分切初利刻則前"
+  },
+  "力" : {
+    "strokes" : 2,
+    "meaning_reading" : "power, force (ちから, chikara, 力)",
+    "kanjis" : "力加助勉"
+  },
+  "勹" : {
+    "strokes" : 2,
+    "meaning_reading" : "embrace, wrap frame (つつみがまえ, tsutsumigamae, 包構)",
+    "kanjis" : "勾包"
+  },
+  "匕" : {
+    "strokes" : 2,
+    "meaning_reading" : "spoon hi (さじのひ, sajinohi, 匕のヒ)",
+    "kanjis" : "化北"
+  },
+  "匚" : {
+    "strokes" : 2,
+    "meaning_reading" : "box frame (はこがまえ, hakogamae, 匚構)",
+    "kanjis" : "匣"
+  },
+  "亡 (匸)" : {
+    "strokes" : 3,
+    "meaning_reading" : "dead, hiding frame (かくしがまえ, kakushigamae, 隠構)",
+    "kanjis" : "亡 妄 忙 忘 盲 荒 望 慌 網"
+  },
+  "十" : {
+    "strokes" : 2,
+    "meaning_reading" : "ten, complete (じゅう, jū, 十)",
+    "kanjis" : "十千午半博"
+  },
+  "卜 (⼘,⺊)" : {
+    "strokes" : 2,
+    "meaning_reading" : "divination to (ぼくのと, bokunoto, 卜のト)",
+    "kanjis" : "占卦"
+  },
+  "卩 (㔾)" : {
+    "strokes" : 2,
+    "meaning_reading" : "seal (ふしづくり, fushidzukuri, 節旁)",
+    "kanjis" : "印危卵"
+  },
+  "厂" : {
+    "strokes" : 2,
+    "meaning_reading" : "cliff (がんだれ, gandare, 雁垂)",
+    "kanjis" : "厚原"
+  },
+  "厶" : {
+    "strokes" : 2,
+    "meaning_reading" : "private (む, mu)",
+    "kanjis" : "去參"
+  },
+  "又" : {
+    "strokes" : 2,
+    "meaning_reading" : "again, right hand (また, mata)",
+    "kanjis" : "友反取受"
+  },
+  "口" : {
+    "strokes" : 3,
+    "meaning_reading" : "mouth, opening (くち, kuchi)",
+    "kanjis" : "口古可名君否呉告周味命和哲唐善器"
+  },
+  "囗" : {
+    "strokes" : 3,
+    "meaning_reading" : "enclosure (くにがまえ, kunigamae, 国構)",
+    "kanjis" : "四回図国"
+  },
+  "土" : {
+    "strokes" : 3,
+    "meaning_reading" : "earth (つち, tsuchi)",
+    "kanjis" : "土在地型城場壁壓"
+  },
+  "士" : {
+    "strokes" : 3,
+    "meaning_reading" : "scholar, bachelor (さむらい, samurai, 侍)",
+    "kanjis" : "士壹"
+  },
+  "夂" : {
+    "strokes" : 3,
+    "meaning_reading" : "winter (ふゆがしら, fuyugashira, 冬頭)",
+    "kanjis" : "夏 夆"
+  },
+  "夊" : {
+    "strokes" : 3,
+    "meaning_reading" : "winter variant (すいにょう, suinyou, 夊繞)",
+    "kanjis" : ""
+  },
+  "夕" : {
+    "strokes" : 3,
+    "meaning_reading" : "evening, sunset (ゆうべ, yūbe)",
+    "kanjis" : "夕外多夜"
+  },
+  "大" : {
+    "strokes" : 3,
+    "meaning_reading" : "big, very (だい, dai)",
+    "kanjis" : "大天奈奧"
+  },
+  "女" : {
+    "strokes" : 3,
+    "meaning_reading" : "woman, female (おんな, onna)",
+    "kanjis" : "女好妄妻姉始姓姫"
+  },
+  "子" : {
+    "strokes" : 3,
+    "meaning_reading" : "child, seed (こ, ko)",
+    "kanjis" : "子孔字學"
+  },
+  "宀" : {
+    "strokes" : 3,
+    "meaning_reading" : "roof (うかんむり, ukanmuri, ウ冠)",
+    "kanjis" : "守家寒實"
+  },
+  "寸" : {
+    "strokes" : 3,
+    "meaning_reading" : "sun (unit of measurement) (すん, sun)",
+    "kanjis" : "寸寺尊將"
+  },
+  "小 (⺌, ⺍)" : {
+    "strokes" : 3,
+    "meaning_reading" : "small, insignificant (ちいさい, chīsai, 小さい)",
+    "kanjis" : "小少"
+  },
+  "尢 (尤,尣)" : {
+    "strokes" : 3,
+    "meaning_reading" : "lame (まげあし, mageashi)",
+    "kanjis" : "就"
+  },
+  "尸" : {
+    "strokes" : 3,
+    "meaning_reading" : "corpse (しかばね, shikabane, 屍)",
+    "kanjis" : "尺局"
+  },
+  "屮" : {
+    "strokes" : 3,
+    "meaning_reading" : "sprout (てつ, tetsu)",
+    "kanjis" : "屯"
+  },
+  "山" : {
+    "strokes" : 3,
+    "meaning_reading" : "mountain (やま, yama)",
+    "kanjis" : "山岡岩島"
+  },
+  "巛 (川,巜)" : {
+    "strokes" : 3,
+    "meaning_reading" : "river (かわ, kawa)",
+    "kanjis" : "川州巡"
+  },
+  "工" : {
+    "strokes" : 3,
+    "meaning_reading" : "work (たくみ, takumi)",
+    "kanjis" : "工左巫差"
+  },
+  "已 (己,巳)" : {
+    "strokes" : 3,
+    "meaning_reading" : "oneself (おのれ, onore)",
+    "kanjis" : "己巳"
+  },
+  "巾" : {
+    "strokes" : 3,
+    "meaning_reading" : "cloth, turban, scarf (はば, haba)",
+    "kanjis" : "市布帝常"
+  },
+  "干" : {
+    "strokes" : 3,
+    "meaning_reading" : "dry (ほし, hoshi)",
+    "kanjis" : "平年"
+  },
+  "幺" : {
+    "strokes" : 3,
+    "meaning_reading" : "short thread (いとがしら, itogashira, 糸頭)",
+    "kanjis" : "幻幼"
+  },
+  "广" : {
+    "strokes" : 3,
+    "meaning_reading" : "dotted cliff (まだれ, madare, 麻垂)",
+    "kanjis" : "序店府度座庭廣廳"
+  },
+  "廴" : {
+    "strokes" : 3,
+    "meaning_reading" : "long stride (いんにょう, innyō, 延繞)",
+    "kanjis" : "延"
+  },
+  "廾" : {
+    "strokes" : 3,
+    "meaning_reading" : "two hands, twenty (にじゅうあし, nijūashi, 二十脚)",
+    "kanjis" : "弁"
+  },
+  "弋" : {
+    "strokes" : 3,
+    "meaning_reading" : "ceremony, shoot, arrow (しきがまえ, shikigamae, 式構)",
+    "kanjis" : "式弑"
+  },
+  "弓" : {
+    "strokes" : 3,
+    "meaning_reading" : "bow (ゆみ, yumi)",
+    "kanjis" : "弓引弟弱彌"
+  },
+  "彐 (彑)" : {
+    "strokes" : 3,
+    "meaning_reading" : "pig's head (けいがしら, keigashira, 彑頭)",
+    "kanjis" : "彖"
+  },
+  "彡" : {
+    "strokes" : 3,
+    "meaning_reading" : "hair, bristle, stubble, beard (さんづくり, sandzukuri, 三旁)",
+    "kanjis" : "形彦"
+  },
+  "彳" : {
+    "strokes" : 3,
+    "meaning_reading" : "step (ぎょうにんべん, gyouninben, 行人偏)",
+    "kanjis" : "役彼後得徳徼"
+  },
+  "心 (忄,⺗)" : {
+    "strokes" : 4,
+    "meaning_reading" : "heart (りっしんべん, risshinben, 立心偏)",
+    "kanjis" : "必忙忌性悪情想"
+  },
+  "戈" : {
+    "strokes" : 4,
+    "meaning_reading" : "spear, halberd (かのほこ, kanohoko)",
+    "kanjis" : "成式弐戦"
+  },
+  "戸 (戶,户)" : {
+    "strokes" : 4,
+    "meaning_reading" : "door, house (とびらのと, tobiranoto)",
+    "kanjis" : "戸戻所"
+  },
+  "手 (扌,龵)" : {
+    "strokes" : 4,
+    "meaning_reading" : "hand (て, te)",
+    "kanjis" : "手 才 挙 拜 拳 掌 掣 擧 (持 掛 打 批 技 抱 押)"
+  },
+  "支" : {
+    "strokes" : 4,
+    "meaning_reading" : "branch (しにょう, shinyō, 支繞)",
+    "kanjis" : "攱攲"
+  },
+  "攵 (攴)" : {
+    "strokes" : 4,
+    "meaning_reading" : "strike, whip (のぶん, nobun, ノ文)",
+    "kanjis" : "收敍數斅"
+  },
+  "文" : {
+    "strokes" : 4,
+    "meaning_reading" : "script, literature (ぶん, bun)",
+    "kanjis" : "文 斊 斈 斌 斐 斑 斕"
+  },
+  "斗" : {
+    "strokes" : 4,
+    "meaning_reading" : "dipper, measuring scoop (とます, tomasu)",
+    "kanjis" : "料 斡"
+  },
+  "斤" : {
+    "strokes" : 4,
+    "meaning_reading" : "axe (おの, ono, 斧)",
+    "kanjis" : "斦 斧 新 斥 斬 斷"
+  },
+  "方" : {
+    "strokes" : 4,
+    "meaning_reading" : "way, square, raft (ほう, hō)",
+    "kanjis" : "方 放 旅 族"
+  },
+  "无 (旡)" : {
+    "strokes" : 4,
+    "meaning_reading" : "have not (むにょう, munyō)",
+    "kanjis" : "无 旡 既 旣"
+  },
+  "日" : {
+    "strokes" : 4,
+    "meaning_reading" : "sun, day (にち, nichi)",
+    "kanjis" : "日白百明的映時晩"
+  },
+  "曰" : {
+    "strokes" : 4,
+    "meaning_reading" : "say (いわく, iwaku)",
+    "kanjis" : "書 最 晉 曷 曹 曾"
+  },
+  "月 (⺝)" : {
+    "strokes" : 4,
+    "meaning_reading" : "moon, month; body, flesh (つき, tsuki)",
+    "kanjis" : "有 服 青 朝"
+  },
+  "木" : {
+    "strokes" : 4,
+    "meaning_reading" : "tree (き, ki)",
+    "kanjis" : "木 杢 板 相 根 森 楽 機 末 本 杉 林"
+  },
+  "欠" : {
+    "strokes" : 4,
+    "meaning_reading" : "yawn, lack (あくび, akubi)",
+    "kanjis" : "欣 欽 欧 欲 歌"
+  },
+  "止" : {
+    "strokes" : 4,
+    "meaning_reading" : "stop (とめる, tomeru)",
+    "kanjis" : "正 歩 此 步 武 歪 歲"
+  },
+  "歹 (歺)" : {
+    "strokes" : 4,
+    "meaning_reading" : "death, decay (がつへん, gatsuhen, 歹偏)",
+    "kanjis" : "死 列 殕"
+  },
+  "殳" : {
+    "strokes" : 4,
+    "meaning_reading" : "weapon, lance (ほこつくり, hokotsukuri)",
+    "kanjis" : "役 投 殴 殷"
+  },
+  "毋 (母,⺟)" : {
+    "strokes" : 4,
+    "meaning_reading" : "do not; mother (なかれ-nakare; はは, haha)",
+    "kanjis" : "毋 母 毎 姆 梅"
+  },
+  "比" : {
+    "strokes" : 4,
+    "meaning_reading" : "compare, compete (くらべる, kuraberu)",
+    "kanjis" : "皆 批 毕 毖 毘 毚"
+  },
+  "毛" : {
+    "strokes" : 4,
+    "meaning_reading" : "fur, hair (け, ke)",
+    "kanjis" : "毟 毡 毦 毫 毳 耗"
+  },
+  "氏" : {
+    "strokes" : 4,
+    "meaning_reading" : "clan (うじ, uji)",
+    "kanjis" : "氏 民 紙 婚 氓"
+  },
+  "气" : {
+    "strokes" : 4,
+    "meaning_reading" : "steam, breath (きがまえ, kigamae, 気構)",
+    "kanjis" : "気 汽 氧"
+  },
+  "水 (氵,氺)" : {
+    "strokes" : 4,
+    "meaning_reading" : "water (みず, mizu)",
+    "kanjis" : "水 永 泳 決 治 海 演 漢 瀬"
+  },
+  "火 (灬)" : {
+    "strokes" : 4,
+    "meaning_reading" : "fire (ひ, hi)",
+    "kanjis" : "火 灯 毯 爆 (烈 烹 焦 然 煮)"
+  },
+  "爪 (爫,⺥,⺤)" : {
+    "strokes" : 4,
+    "meaning_reading" : "claw, nail, talon (つめ, tsume)",
+    "kanjis" : "爬 爯 爭 爰 爲"
+  },
+  "父" : {
+    "strokes" : 4,
+    "meaning_reading" : "father (ちち, chichi)",
+    "kanjis" : "斧 釜"
+  },
+  "爻" : {
+    "strokes" : 4,
+    "meaning_reading" : "mix, twine, cross (こう, kō)",
+    "kanjis" : "爼 爽 爾"
+  },
+  "爿 (丬)" : {
+    "strokes" : 4,
+    "meaning_reading" : "split wood (しょうへん, shōhen, 爿偏)",
+    "kanjis" : "牀 奘 牃"
+  },
+  "片" : {
+    "strokes" : 4,
+    "meaning_reading" : "(a) slice (かた, kata)",
+    "kanjis" : "版 牌 牒"
+  },
+  "牙" : {
+    "strokes" : 4,
+    "meaning_reading" : "fang (きばへん, kibahen, 牙偏)",
+    "kanjis" : "芽 呀 牚"
+  },
+  "牛 (牜, ⺧)" : {
+    "strokes" : 4,
+    "meaning_reading" : "cow (うし, ushi)",
+    "kanjis" : "告 牟 牧 物 特 解"
+  },
+  "犬 (犭)" : {
+    "strokes" : 4,
+    "meaning_reading" : "dog (いぬ, inu)",
+    "kanjis" : "犬 犯 狂 狙 狗 献 獣"
+  },
+  "玄" : {
+    "strokes" : 5,
+    "meaning_reading" : "dark, profound (げん, gen)",
+    "kanjis" : "弦玆"
+  },
+  "王 (玉, 玊, ⺩)" : {
+    "strokes" : 4,
+    "meaning_reading" : "king; ball, jade (おう-ō; たま, tama)",
+    "kanjis" : "王 玉 主 弄 皇 理 差 聖"
+  },
+  "瓜" : {
+    "strokes" : 5,
+    "meaning_reading" : "melon (うり, uri)",
+    "kanjis" : "呱 瓞"
+  },
+  "瓦" : {
+    "strokes" : 5,
+    "meaning_reading" : "tile (かわら, kawara)",
+    "kanjis" : "瓧 瓮 甄"
+  },
+  "甘" : {
+    "strokes" : 5,
+    "meaning_reading" : "sweet (あまい, amai)",
+    "kanjis" : "柑 甜 酣"
+  },
+  "生" : {
+    "strokes" : 5,
+    "meaning_reading" : "life (うまれる, umareru)",
+    "kanjis" : "牲 笙 甥"
+  },
+  "用 (甩)" : {
+    "strokes" : 5,
+    "meaning_reading" : "use; (throw) (もちいる, mochīru)",
+    "kanjis" : "佣 甬 甯"
+  },
+  "田" : {
+    "strokes" : 5,
+    "meaning_reading" : "field (た, ta)",
+    "kanjis" : "田 町 思 留 略 番"
+  },
+  "疋 (⺪)" : {
+    "strokes" : 5,
+    "meaning_reading" : "bolt of cloth (ひき, hiki)",
+    "kanjis" : "疏 楚 胥 延"
+  },
+  "疒" : {
+    "strokes" : 5,
+    "meaning_reading" : "sickness (やまいだれ, yamaidare, 病垂)",
+    "kanjis" : "病 症 痛 癌 癖"
+  },
+  "癶" : {
+    "strokes" : 5,
+    "meaning_reading" : "footsteps (はつがしら, hatsugashira, 発頭)",
+    "kanjis" : "発 登"
+  },
+  "白" : {
+    "strokes" : 5,
+    "meaning_reading" : "white (しろ, shiro)",
+    "kanjis" : "皃 的 皆 皇"
+  },
+  "皮" : {
+    "strokes" : 5,
+    "meaning_reading" : "skin (けがわ, kegawa, 毛皮)",
+    "kanjis" : "披 彼 波"
+  },
+  "皿" : {
+    "strokes" : 5,
+    "meaning_reading" : "dish (さら, sara)",
+    "kanjis" : "盂 盉 盍 監 蘯"
+  },
+  "目" : {
+    "strokes" : 5,
+    "meaning_reading" : "eye (め, me)",
+    "kanjis" : "目 見 具 省 眠 眼 観 覧"
+  },
+  "矛" : {
+    "strokes" : 5,
+    "meaning_reading" : "spear, pike (むのほこ, munohoko)",
+    "kanjis" : "茅 矜"
+  },
+  "矢" : {
+    "strokes" : 5,
+    "meaning_reading" : "arrow (や, ya)",
+    "kanjis" : "医 族 矩"
+  },
+  "石" : {
+    "strokes" : 5,
+    "meaning_reading" : "stone (いし, ishi)",
+    "kanjis" : "石 岩 砂 破 碑 碧"
+  },
+  "示 (礻)" : {
+    "strokes" : 5,
+    "meaning_reading" : "altar, display (しめす, shimesu)",
+    "kanjis" : "示 奈 祭 禁 礼 社 神 視 福"
+  },
+  "禸" : {
+    "strokes" : 5,
+    "meaning_reading" : "track (ぐうのあし, gūnoashi)",
+    "kanjis" : "禹 禺 禽"
+  },
+  "禾" : {
+    "strokes" : 5,
+    "meaning_reading" : "two-branch tree (のぎ, nogi, ノ木)",
+    "kanjis" : "利 私 季 和 科 香 秦 穀"
+  },
+  "穴" : {
+    "strokes" : 5,
+    "meaning_reading" : "cave (あな, ana)",
+    "kanjis" : "空 突 窅 窘 窩 窶 竇"
+  },
+  "立" : {
+    "strokes" : 5,
+    "meaning_reading" : "stand, erect (たつ, tatsu)",
+    "kanjis" : "立 音 産 翌 意 新 端 親 競"
+  },
+  "竹 (⺮)" : {
+    "strokes" : 6,
+    "meaning_reading" : "bamboo (たけ, take)",
+    "kanjis" : "竺 笑 第 等 簡"
+  },
+  "米" : {
+    "strokes" : 6,
+    "meaning_reading" : "rice (こめ, kome)",
+    "kanjis" : "料 断 奥 糊 麟"
+  },
+  "糸 (糹)" : {
+    "strokes" : 6,
+    "meaning_reading" : "thread, string (いと, ito)",
+    "kanjis" : "系 級 紙 素 細 組 終 絵 紫"
+  },
+  "缶" : {
+    "strokes" : 6,
+    "meaning_reading" : "can, earthenware jar (かん, kan)",
+    "kanjis" : "缶 缸 窑 陶"
+  },
+  "罒 (网,罓,⺲,⺳)" : {
+    "strokes" : 5,
+    "meaning_reading" : "net (あみがしら, amigashira, 網頭)",
+    "kanjis" : "買 置 羅"
+  },
+  "羊 (⺶,⺷)" : {
+    "strokes" : 6,
+    "meaning_reading" : "sheep (ひつじ, hitsuji)",
+    "kanjis" : "着 羚 翔 着"
+  },
+  "羽" : {
+    "strokes" : 6,
+    "meaning_reading" : "feather, wing (はね, hane)",
+    "kanjis" : "習 翀 翁 翔"
+  },
+  "耂 (老,⺹)" : {
+    "strokes" : 4,
+    "meaning_reading" : "old (ろう, rō)",
+    "kanjis" : "耆孝耋"
+  },
+  "而" : {
+    "strokes" : 6,
+    "meaning_reading" : "rake, beard (しかして, shikashite)",
+    "kanjis" : "耎耐耑"
+  },
+  "耒" : {
+    "strokes" : 6,
+    "meaning_reading" : "plow (らいすき, raisuki)",
+    "kanjis" : "耔 耝 耨 耰"
+  },
+  "耳" : {
+    "strokes" : 6,
+    "meaning_reading" : "ear (みみ, mimi)",
+    "kanjis" : "取 聞 職 叢"
+  },
+  "聿 (⺻)" : {
+    "strokes" : 6,
+    "meaning_reading" : "brush (ふでづくり, fudezukuri, 聿旁)",
+    "kanjis" : "律 書 建"
+  },
+  "肉 (⺼,月)" : {
+    "strokes" : 6,
+    "meaning_reading" : "meat (にく, niku)",
+    "kanjis" : "肉 肖 股 胃 腅 脤"
+  },
+  "臣" : {
+    "strokes" : 7,
+    "meaning_reading" : "minister, official (しん, shin)",
+    "kanjis" : "臥 宦 蔵"
+  },
+  "自" : {
+    "strokes" : 6,
+    "meaning_reading" : "oneself (みずから, mizukara)",
+    "kanjis" : "自 臫 臬 臲"
+  },
+  "至" : {
+    "strokes" : 6,
+    "meaning_reading" : "arrive (いたる, itaru)",
+    "kanjis" : "致 臸 臺"
+  },
+  "臼" : {
+    "strokes" : 6,
+    "meaning_reading" : "mortar (うす, usu)",
+    "kanjis" : "桕 舅 舂 鼠 插"
+  },
+  "舌" : {
+    "strokes" : 6,
+    "meaning_reading" : "tongue (した, shita)",
+    "kanjis" : "乱 适 話 舍"
+  },
+  "舛" : {
+    "strokes" : 7,
+    "meaning_reading" : "opposite (ます, masu)",
+    "kanjis" : "舛 舜 舞"
+  },
+  "舟" : {
+    "strokes" : 6,
+    "meaning_reading" : "boat (ふね, fune)",
+    "kanjis" : "航 船 艦"
+  },
+  "艮" : {
+    "strokes" : 6,
+    "meaning_reading" : "stopping (うしとら, ushitora, 丑寅)",
+    "kanjis" : "良 飲 很"
+  },
+  "色" : {
+    "strokes" : 6,
+    "meaning_reading" : "colour, prettiness (いろ, iro)",
+    "kanjis" : "色 艴 艷"
+  },
+  "艹 (艸,䒑)" : {
+    "strokes" : 3,
+    "meaning_reading" : "grass, vegetation (くさ, kusa, 草)",
+    "kanjis" : "共 花(37) 英 苦 草 茶 落 幕 靴 鞄 薬"
+  },
+  "虍" : {
+    "strokes" : 6,
+    "meaning_reading" : "tiger stripes (とらかんむり, torakanmuri, 虎冠)",
+    "kanjis" : "虎 虐 彪 虒"
+  },
+  "虫" : {
+    "strokes" : 6,
+    "meaning_reading" : "insect (むし, mushi)",
+    "kanjis" : "蚯 蚓 強 触 蟻 蟹"
+  },
+  "血" : {
+    "strokes" : 6,
+    "meaning_reading" : "blood (ち, chi)",
+    "kanjis" : "洫 衁 衅 衆"
+  },
+  "行" : {
+    "strokes" : 6,
+    "meaning_reading" : "go, do (ぎょう, gyō)",
+    "kanjis" : "行 衍 術 衝"
+  },
+  "衣 (衤)" : {
+    "strokes" : 6,
+    "meaning_reading" : "clothes (ころも, koromo)",
+    "kanjis" : "衣 装 裁 (初 被 複)"
+  },
+  "西 (襾,覀)" : {
+    "strokes" : 6,
+    "meaning_reading" : "west (にし, nishi)",
+    "kanjis" : "西 要 覊"
+  },
+  "見" : {
+    "strokes" : 7,
+    "meaning_reading" : "see (みる, miru)",
+    "kanjis" : "規 親 覺 觀"
+  },
+  "角" : {
+    "strokes" : 7,
+    "meaning_reading" : "horn (つの, tsuno)",
+    "kanjis" : "觚 解 觕 觥 觸"
+  },
+  "言 (訁)" : {
+    "strokes" : 7,
+    "meaning_reading" : "speech (こと, koto)",
+    "kanjis" : "誁 詋 詔 評 詗 詥 試 詧"
+  },
+  "谷" : {
+    "strokes" : 7,
+    "meaning_reading" : "valley (たに, tani)",
+    "kanjis" : "谿 豀 谸"
+  },
+  "豆" : {
+    "strokes" : 7,
+    "meaning_reading" : "bean (まめ, mame)",
+    "kanjis" : "豈 豐 豎"
+  },
+  "豕" : {
+    "strokes" : 7,
+    "meaning_reading" : "pig (いのこ, inoko, 猪子)",
+    "kanjis" : "豕 豚 象"
+  },
+  "豸" : {
+    "strokes" : 7,
+    "meaning_reading" : "cat, badger (むじな, mujina, 狢)",
+    "kanjis" : "豹 貌 貓 貉"
+  },
+  "貝" : {
+    "strokes" : 7,
+    "meaning_reading" : "shell (かい, kai)",
+    "kanjis" : "財 賊 賜 贛 貧 貨 貫 貿"
+  },
+  "赤" : {
+    "strokes" : 7,
+    "meaning_reading" : "red, bare (あか, aka)",
+    "kanjis" : "赫 赭"
+  },
+  "走 (赱)" : {
+    "strokes" : 7,
+    "meaning_reading" : "run (はしる, hashiru)",
+    "kanjis" : "赴 起 超"
+  },
+  "足 (⻊)" : {
+    "strokes" : 7,
+    "meaning_reading" : "foot (あし, ashi)",
+    "kanjis" : "跑 跨 跟 跪 路"
+  },
+  "身" : {
+    "strokes" : 7,
+    "meaning_reading" : "body (み, mi)",
+    "kanjis" : "躬 躲 軀"
+  },
+  "車" : {
+    "strokes" : 7,
+    "meaning_reading" : "cart, car (くるま, kuruma)",
+    "kanjis" : "軌 軟 較 軍 載"
+  },
+  "辛" : {
+    "strokes" : 7,
+    "meaning_reading" : "spicy, bitter (からい, karai)",
+    "kanjis" : "辜 辟 辣 辦 辨"
+  },
+  "辰" : {
+    "strokes" : 7,
+    "meaning_reading" : "morning (しんのたつ, shinnotatsu, 辰のたつ)",
+    "kanjis" : "辱 農"
+  },
+  "⻌ (辵,辶)" : {
+    "strokes" : 3,
+    "meaning_reading" : "walk (しんにゅう, shinnyū, 之繞)",
+    "kanjis" : "巡 迎 通 追 逃 迎 進"
+  },
+  "邑 (⻏, 阝)" : {
+    "strokes" : 3,
+    "meaning_reading" : "town (阝 right) (むら, mura)",
+    "kanjis" : "那 邦 郎 部 郭 都 鄉"
+  },
+  "酉" : {
+    "strokes" : 7,
+    "meaning_reading" : "sake (rice-based alcoholic beverage) (とり, tori)",
+    "kanjis" : "酒　醉 油 醒 酸"
+  },
+  "釆" : {
+    "strokes" : 7,
+    "meaning_reading" : "divide, distinguish, choose (のごめ, nogome, ノ米)",
+    "kanjis" : "釉 釋"
+  },
+  "里" : {
+    "strokes" : 7,
+    "meaning_reading" : "village, mile (さと, sato)",
+    "kanjis" : "野 野"
+  },
+  "金 (釒)" : {
+    "strokes" : 8,
+    "meaning_reading" : "metal, gold (かね, kane)",
+    "kanjis" : "銀 銅 釘 銳 鋞 鋙 鉒 鉍 鉗 鈡 鈠"
+  },
+  "長 (镸)" : {
+    "strokes" : 8,
+    "meaning_reading" : "long, grow; leader (ながい-nagai; ちょう, chō)",
+    "kanjis" : "長"
+  },
+  "門" : {
+    "strokes" : 8,
+    "meaning_reading" : "gate (もん, mon)",
+    "kanjis" : "間 閑 関 闘 閉 開 閏 間"
+  },
+  "阜 (⻖, 阝)" : {
+    "strokes" : 3,
+    "meaning_reading" : "mound, dam (阝 left) (ぎふのふ, gifunofu, 岐阜の阜)",
+    "kanjis" : "阪 防 阻 陆 陘 院 险 陳"
+  },
+  "隶" : {
+    "strokes" : 8,
+    "meaning_reading" : "slave, capture (れいづくり, reidzukuri, 隷旁)",
+    "kanjis" : "隸 隺"
+  },
+  "隹" : {
+    "strokes" : 8,
+    "meaning_reading" : "old bird (ふるとり, furutori, 古鳥)",
+    "kanjis" : "雀 集 雁 难 雀 雅"
+  },
+  "雨 (⻗)" : {
+    "strokes" : 8,
+    "meaning_reading" : "rain (あめ, ame)",
+    "kanjis" : "雾 霜 雪 霸 雲 霧"
+  },
+  "青 (靑)" : {
+    "strokes" : 8,
+    "meaning_reading" : "green, blue (あお, ao)",
+    "kanjis" : "靕 靖 靜"
+  },
+  "非" : {
+    "strokes" : 8,
+    "meaning_reading" : "wrong (あらず, arazu)",
+    "kanjis" : "靠 靠 靟"
+  },
+  "面 (靣)" : {
+    "strokes" : 9,
+    "meaning_reading" : "face (めん, men)",
+    "kanjis" : "靦 靨"
+  },
+  "革" : {
+    "strokes" : 9,
+    "meaning_reading" : "leather, rawhide (かくのかわ, kakunokawa)",
+    "kanjis" : "靴 鞍 鞅 鞍 鞭"
+  },
+  "韋" : {
+    "strokes" : 9,
+    "meaning_reading" : "tanned leather (なめしがわ, nameshigawa)",
+    "kanjis" : "韋 韓 韜"
+  },
+  "韭" : {
+    "strokes" : 9,
+    "meaning_reading" : "leek (にら, nira)",
+    "kanjis" : "韱 韲"
+  },
+  "音" : {
+    "strokes" : 9,
+    "meaning_reading" : "sound (おと, oto)",
+    "kanjis" : "韶 韻 韾"
+  },
+  "頁" : {
+    "strokes" : 9,
+    "meaning_reading" : "big shell (おおがい, ōgai, 大貝)",
+    "kanjis" : "頃 項 順 須 領 頭 頩 頂"
+  },
+  "風 (𠘨)" : {
+    "strokes" : 9,
+    "meaning_reading" : "wind (かぜ, kaze)",
+    "kanjis" : "風 颱 飄 颿 颪"
+  },
+  "飛" : {
+    "strokes" : 9,
+    "meaning_reading" : "fly (とぶ, tobu)",
+    "kanjis" : "飜 飝"
+  },
+  "食 (飠, 𩙿)" : {
+    "strokes" : 9,
+    "meaning_reading" : "eat, food (しょく, shoku)",
+    "kanjis" : "飯 飲 餓 餘 餐 養"
+  },
+  "首" : {
+    "strokes" : 9,
+    "meaning_reading" : "neck, head (くび, kubi)",
+    "kanjis" : "馗 馘"
+  },
+  "香" : {
+    "strokes" : 9,
+    "meaning_reading" : "fragrant (においこう, nioikō)",
+    "kanjis" : "馨"
+  },
+  "馬" : {
+    "strokes" : 10,
+    "meaning_reading" : "horse (うま, uma)",
+    "kanjis" : "馮 馴 馳 駐 驚"
+  },
+  "骨" : {
+    "strokes" : 10,
+    "meaning_reading" : "bone (ほね, hone)",
+    "kanjis" : "骼 髒 髀 骿 骾"
+  },
+  "高 (髙)" : {
+    "strokes" : 10,
+    "meaning_reading" : "tall, high (たかい, takai)",
+    "kanjis" : "髚 髛"
+  },
+  "髟" : {
+    "strokes" : 10,
+    "meaning_reading" : "hair (かみがしら, kamigashira, 髪頭)",
+    "kanjis" : "髮 鬚 鬆 鬍 髦"
+  },
+  "鬥" : {
+    "strokes" : 10,
+    "meaning_reading" : "fight (とうがまえ, tōgamae, 闘構)",
+    "kanjis" : "鬧 鬪"
+  },
+  "鬯" : {
+    "strokes" : 10,
+    "meaning_reading" : "herbs, sacrificial wine (ちょう, chō)",
+    "kanjis" : "鬰 鬱"
+  },
+  "鬲" : {
+    "strokes" : 10,
+    "meaning_reading" : "tripod, cauldron (かなえ, kanae)",
+    "kanjis" : "鬶 鬷 鬸"
+  },
+  "鬼" : {
+    "strokes" : 10,
+    "meaning_reading" : "ghost, demon (おに, oni)",
+    "kanjis" : "魂 魁 鬽 魄"
+  },
+  "魚" : {
+    "strokes" : 11,
+    "meaning_reading" : "fish (うお, uo)",
+    "kanjis" : "鯉 鮑 魛 魜 魝 魞 魟 魠"
+  },
+  "鳥" : {
+    "strokes" : 11,
+    "meaning_reading" : "bird (とり, tori)",
+    "kanjis" : "鳫 鳮 鳱 鳳 鳴 鳿 雞 鳴 鴻 鴛"
+  },
+  "鹵" : {
+    "strokes" : 11,
+    "meaning_reading" : "salt (ろ, ro)",
+    "kanjis" : "鹹 鹼 鹽"
+  },
+  "鹿" : {
+    "strokes" : 11,
+    "meaning_reading" : "deer (しか, shika)",
+    "kanjis" : "塵 麃 麋 麉 麟"
+  },
+  "麦 (麥)" : {
+    "strokes" : 7,
+    "meaning_reading" : "wheat (むぎ, mugi, 麦)",
+    "kanjis" : "麴 麵 麱 麨 麺"
+  },
+  "麻" : {
+    "strokes" : 11,
+    "meaning_reading" : "hemp, flax (あさ, asa)",
+    "kanjis" : "麼 魔"
+  },
+  "黄 (黃)" : {
+    "strokes" : 11,
+    "meaning_reading" : "yellow (きいろ, kīro, 黄色)",
+    "kanjis" : "黊 黌"
+  },
+  "黍" : {
+    "strokes" : 12,
+    "meaning_reading" : "millet (きび, kibi)",
+    "kanjis" : "黏 黎"
+  },
+  "黒 (黑)" : {
+    "strokes" : 11,
+    "meaning_reading" : "black (くろ, kuro)",
+    "kanjis" : "點 黛 黱 黨"
+  },
+  "黹" : {
+    "strokes" : 12,
+    "meaning_reading" : "embroidery, needlework (ふつ, futsu, 黻)",
+    "kanjis" : "黼 黻"
+  },
+  "黽" : {
+    "strokes" : 13,
+    "meaning_reading" : "frog, amphibian (べん, ben)",
+    "kanjis" : "黿 鼈"
+  },
+  "鼎" : {
+    "strokes" : 13,
+    "meaning_reading" : "sacrificial tripod (かなえ, kanae)",
+    "kanjis" : "鼏 鼒"
+  },
+  "鼓" : {
+    "strokes" : 13,
+    "meaning_reading" : "drum (つづみ, tsudzumi)",
+    "kanjis" : "鼗 鼘"
+  },
+  "鼠" : {
+    "strokes" : 13,
+    "meaning_reading" : "rat, mouse (ねずみ, nezumi)",
+    "kanjis" : "鼢 鼣 鼤"
+  },
+  "鼻" : {
+    "strokes" : 14,
+    "meaning_reading" : "nose (はな, hana)",
+    "kanjis" : "鼼 鼽 鼿"
+  },
+  "齊" : {
+    "strokes" : 14,
+    "meaning_reading" : "even, uniformly (せい, sei, 斉)",
+    "kanjis" : "齋 齏 齏"
+  },
+  "歯 (齒)" : {
+    "strokes" : 12,
+    "meaning_reading" : "tooth, molar (は, ha)",
+    "kanjis" : "齡 齠 齗"
+  },
+  "竜 (龍)" : {
+    "strokes" : 10,
+    "meaning_reading" : "dragon (りゅう, ryū)",
+    "kanjis" : "龖 龘"
+  },
+  "亀 (龜)" : {
+    "strokes" : 11,
+    "meaning_reading" : "turtle, tortoise (かめ, kame)",
+    "kanjis" : "龝"
+  },
+  "龠" : {
+    "strokes" : 17,
+    "meaning_reading" : "flute (やく, yaku)",
+    "kanjis" : "龣"
+  }
+}

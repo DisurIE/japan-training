@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\JsonHandler;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Kanji;
 use App\Models\Radical;
@@ -17,6 +18,7 @@ class RadicalController extends Controller
 {
     public function index(Radical $radicals)
     {
+        JsonHandler::addRadicalsToDatabaseFromJson("radicals.json");
         return Inertia::render('Radicals', [
             'radicals' => $radicals->all()
         ]);

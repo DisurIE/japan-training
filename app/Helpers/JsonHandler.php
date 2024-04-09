@@ -9,7 +9,7 @@ class JsonHandler
     {
         $contents = File::get(base_path($path));
         $json = json_decode($contents, true);
-        $arrayKanjis = self::getArrayFromJson($json);
+        $arrayKanjis = self::getArrayFromJsonKanjis($json);
         echo '<pre>';
         print_r($arrayKanjis);
         echo '</pre>';
@@ -20,7 +20,7 @@ class JsonHandler
         }
     }
 
-    private static function getArrayFromJson($json) : array
+    private static function getArrayFromJsonKanjis($json) : array
     {
         $array = array();
         foreach ($json as $k => $v) {
@@ -35,5 +35,27 @@ class JsonHandler
         }
         return $array;
     }
+    private static function getArrayFromJsonRadicals($json)
+    {
+        $array = array();
+        foreach ($json as $k => $v) {
+            $arr = [];
+            $arr['character'] = $k;
+            $arr['strokes'] = $v['strokes'];
 
+            $array[] = $arr;
+        }
+        return $array;
+    }
+    public static function addRadicalsToDatabaseFromJson(string $path)
+    {
+
+        $contents = File::get(base_path($path));
+        $json = json_decode($contents, true);
+        $arrayRadicals = self::getArrayFromJsonRadicals($json);
+        echo '<pre>';
+        print_r($arrayRadicals);
+        echo '</pre>';
+
+    }
 }
