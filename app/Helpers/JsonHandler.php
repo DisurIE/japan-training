@@ -42,6 +42,9 @@ class JsonHandler
             $arr = [];
             $arr['character'] = $k;
             $arr['strokes'] = $v['strokes'];
+            $arr['meaning'] = explode("(",$v['meaning_reading'])[0];
+            $arr['reading'] = substr(explode("(",$v['meaning_reading'])[1], 0, -1);
+            $arr['kanjis'] = $v['kanjis'];
 
             $array[] = $arr;
         }
