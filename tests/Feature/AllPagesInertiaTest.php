@@ -13,4 +13,20 @@ it('renders public pages', function (string $path, string $component) {
         'path' => '/',
         'component' => 'Main',
     ],
+    [
+        'path' => '/kanjis',
+        'component' => 'Kanji/Kanjis',
+    ],
+    [
+        'path' => '/kanjis/蚕',
+        'component' => 'Kanji/KanjisShow',
+    ],
+    [
+        'path' => '/radicals',
+        'component' => 'Radicals',
+    ],
+    [
+        'path' => '/hiragana-katakana',
+        'component' => 'HiraganaKatakana',
+    ],
 ]);
