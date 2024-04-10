@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 use App\Models\Kanji;
+use App\Models\Radical;
 use Illuminate\Support\Facades\File;
 class JsonHandler
 {
@@ -59,6 +60,10 @@ class JsonHandler
         echo '<pre>';
         print_r($arrayRadicals);
         echo '</pre>';
+        $chunkedData = array_chunk($arrayRadicals, 30); // Разбиваем массив на части
 
+        foreach ($chunkedData as $chunk) {
+            Radical::insertOrIgnore($chunk);
+        }
     }
 }

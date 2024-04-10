@@ -18,7 +18,7 @@ class RadicalController extends Controller
 {
     public function index(Radical $radicals)
     {
-        JsonHandler::addRadicalsToDatabaseFromJson("radicals.json");
+        //JsonHandler::addRadicalsToDatabaseFromJson("radicals.json");
         return Inertia::render('Radicals', [
             'radicals' => $radicals->all()
         ]);
