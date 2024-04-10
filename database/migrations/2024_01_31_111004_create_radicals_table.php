@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('radicals', function (Blueprint $table) {
             $table->id();
-            $table->string('character');
+            $table->string('character')->unique();
             $table->string('meaning');
             $table->string('reading');
             $table->string('image')->nullable();

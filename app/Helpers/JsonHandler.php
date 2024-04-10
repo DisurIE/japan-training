@@ -17,7 +17,7 @@ class JsonHandler
         $chunkedData = array_chunk($arrayKanjis, 25); // Разбиваем массив на части
 
         foreach ($chunkedData as $chunk) {
-            Kanji::insert($chunk);
+            Kanji::insertOrIgnore($chunk);
         }
     }
 

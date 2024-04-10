@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('kanjis', function (Blueprint $table) {
             $table->id();
-            $table->string('character');
+            $table->string('character')->unique();
             $table->string('meaning');
             $table->string('onyomi');
             $table->string('kunyomi');
