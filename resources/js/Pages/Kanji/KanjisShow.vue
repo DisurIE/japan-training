@@ -5,6 +5,7 @@ import HeaderComponent from "@/Components/HeaderComponent.vue";
 
 defineProps({
     kanji: Object,
+    radicals: Array,
 });
 
 </script>
@@ -22,7 +23,9 @@ defineProps({
             <div class="text-2xl">kunyomi: {{ kanji.kunyomi }}</div>
             <div class="text-2xl">Level: {{ kanji.level }}</div>
         </div>
-
+        <div v-for="radical in radicals">
+            {{ radical.character }}
+        </div>
     </Layout>
 </template>
 

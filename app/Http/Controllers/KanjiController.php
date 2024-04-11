@@ -26,9 +26,10 @@ class KanjiController extends Controller
 
     public function show(Kanji $kanji) : Response
     {
+       // dd(Kanji::find($kanji->id)->radicals()->orderBy('id')->get());
         return Inertia::render('Kanji/KanjisShow', [
             'kanji' => $kanji,
-            'radicals' => Kanji::where('id', $kanji->id)->with('radicals')->first(),
+            'radicals' => Kanji::find($kanji->id)->radicals()->orderBy('id')->get(),
         ]);
     }
 
