@@ -23,8 +23,10 @@ defineProps({
             <div class="text-2xl">kunyomi: {{ kanji.kunyomi }}</div>
             <div class="text-2xl">Level: {{ kanji.level }}</div>
         </div>
-        <div v-for="radical in radicals">
-            {{ radical.character }}
+        <div v-if="radicals !== undefined">
+            <div v-for="radical in radicals">
+                {{ radical.character }}
+            </div>
         </div>
     </Layout>
 </template>

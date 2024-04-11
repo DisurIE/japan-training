@@ -61,6 +61,6 @@ class KanjiSeeder extends Seeder
     ];
     public function run(): void
     {
-        DB::table('kanjis')->insert(self::KANJI);
+        DB::table('kanjis')->insertOrIgnore(self::KANJI);
     }
 }

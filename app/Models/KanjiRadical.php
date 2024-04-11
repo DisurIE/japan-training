@@ -9,5 +9,5 @@ class KanjiRadical extends Model
 {
     use HasFactory;
 
-    protected $table = 'kanji_radicals';
+    protected $table = 'kanji_radical';
 }
