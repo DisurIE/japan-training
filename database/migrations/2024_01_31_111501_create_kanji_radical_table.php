@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kanji_radicals', function (Blueprint $table) {
+        Schema::create('kanji_radical', function (Blueprint $table) {
             $table->unsignedBigInteger('kanji_id');
             $table->unsignedBigInteger('radical_id');
 
