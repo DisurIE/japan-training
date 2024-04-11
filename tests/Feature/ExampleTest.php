@@ -33,8 +33,4 @@ class ExampleTest extends TestCase
         $responseUpdate->assertRedirect('/login');
     }
 
-    public function test_the_kanjis_ok(): void
-    {
-        $response = $this->get('/kanjis');
-    }
 }

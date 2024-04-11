@@ -27,10 +27,10 @@ it('renders public pages', function (string $path, string $component) {
         'path' => '/radicals',
         'component' => 'Radicals',
     ],
-//    [
-//        'path' => '/radicals/儿',
-//        'component' => 'RadicalsShow',
-//    ],
+    [
+        'path' => '/radicals/儿',
+        'component' => 'RadicalsShow',
+    ],
     [
         'path' => '/hiragana-katakana',
         'component' => 'HiraganaKatakana',
