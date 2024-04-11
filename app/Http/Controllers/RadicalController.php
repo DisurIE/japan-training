@@ -26,7 +26,7 @@ class RadicalController extends Controller
 
     public function show(Radical $radical)
     {
-        return Inertia::render('RadicalShow', [
+        return Inertia::render('RadicalsShow', [
             'radical' => $radical
         ]);
     }

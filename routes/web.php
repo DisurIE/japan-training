@@ -22,11 +22,8 @@ Route::controller(Ctr\KanjiController::class)->group(function () {
 
 Route::get('/hiragana-katakana', [Ctr\HiraganaKatakanaController::class, 'index'])->name('hiragana-katakana.index');
 Route::get('/radicals', [Ctr\RadicalController::class, 'index'])->name('radicals.index');
+Route::get('/radicals/{radical:character}', [Ctr\RadicalController::class, 'show'])->name('radicals.show');
 
-
-Route::get('/radicals/{radical}', function () {
-    return Inertia::render('RadicalsShow');
-})->name('radicals.show');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
