@@ -36,7 +36,7 @@ class JsonHandler
         }
         return $array;
     }
-    private static function getArrayFromJsonRadicals($json)
+    private static function getArrayFromJsonRadicals($json) : array
     {
         $array = array();
         foreach ($json as $k => $v) {
@@ -51,7 +51,7 @@ class JsonHandler
         }
         return $array;
     }
-    public static function addRadicalsToDatabaseFromJson(string $path)
+    public static function addRadicalsToDatabaseFromJson(string $path) : void
     {
 
         $contents = File::get(base_path($path));
@@ -67,8 +67,15 @@ class JsonHandler
         }
     }
 
-    public static function addRelationshipsRadicalsKanjis()
+    public static function addRelationshipsRadicalsKanjis(string $path) : void
     {
+        $contents = File::get(base_path($path));
+        $json = json_decode($contents, true);
+        $arrayRadicals = self::getArrayFromJsonRadicals($json);
+        Radical::each(function (Radical $radical) {
+            $radical->kanjis()->sync(Kanji::whereIn('character', explode(" ", $radical['kanjis']))->pluck('id'));
+        });
+
 
     }
 }
