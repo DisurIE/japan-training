@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Kanji extends Model
 {
     use HasFactory;
 
-    public function radicals()
+    public function radicals() : belongsToMany
     {
         return $this->belongsToMany(Radical::class);
     }

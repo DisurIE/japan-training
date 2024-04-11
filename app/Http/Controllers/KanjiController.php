@@ -28,7 +28,7 @@ class KanjiController extends Controller
     {
         return Inertia::render('Kanji/KanjisShow', [
             'kanji' => $kanji,
-            'radicals' => $kanji->radicals(),
+            'radicals' => Kanji::where('id', $kanji->id)->with('radicals')->first(),
         ]);
     }
 
@@ -38,22 +38,15 @@ class KanjiController extends Controller
     }
     public function store(Request $request) : mixed
     {
-        $request->validate([
+
+        $create = Kanji::create($request->validate([
             'character' => ['required', 'unique:kanjis'],
             'meaning' => 'required',
             'onyomi' => 'required',
             'kunyomi' => 'required',
             'important_reading' => 'required',
             'level' => ['required', 'numeric'],
-        ]);
-        $create = Kanji::create([
-            'character' => request('character'),
-            'meaning' => request('meaning'),
-            'onyomi' => request('onyomi'),
-            'kunyomi' => request('kunyomi'),
-            'important_reading' => request('important_reading'),
-            'level' => request('level'),
-        ]);
+        ]));
         if($create) {
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
         }
@@ -73,24 +66,17 @@ class KanjiController extends Controller
     public function update(Request $request) : mixed
     {
         //dd($request);
-        $request->validate([
+
+//        return abort(500);
+        $kanji = Kanji::where('character', '=', $request['character'])->first();
+        $create = $kanji->update($request->validate([
             'character' => ['required'],
             'meaning' => 'required',
             'onyomi' => 'required',
             'kunyomi' => 'required',
             'important_reading' => 'required',
             'level' => ['required', 'numeric'],
-        ]);
-//        return abort(500);
-        $kanji = Kanji::where('character', '=', $request['character'])->first();
-        $create = $kanji->update([
-            'character' => request('character'),
-            'meaning' => request('meaning'),
-            'onyomi' => request('onyomi'),
-            'kunyomi' => request('kunyomi'),
-            'important_reading' => request('important_reading'),
-            'level' => request('level'),
-        ]);
+        ]));
         if($create) {
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
         }

@@ -66,4 +66,9 @@ class JsonHandler
             Radical::insertOrIgnore($chunk);
         }
     }
+
+    public static function addRelationshipsRadicalsKanjis()
+    {
+
+    }
 }
