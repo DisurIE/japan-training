@@ -18,6 +18,9 @@ export default {
                 return text.slice(0, length);
             }
         },
+        execute(text, separator){
+            return text.split(separator)[0].replace(/[\s.,%]/g, '');
+        }
     },
 }
 
@@ -34,8 +37,8 @@ export default {
                             <div class="font-bold text-6xl text-center">{{ truncate(radical.character, 1) }}</div>
                             <div class="absolute inset-0 bg-gray-800 text-white opacity-0 transition duration-300 hover:opacity-100">
                                 <div class="flex flex-col justify-center h-full px-4 py-2">
-                                    <div class="text-center text-lg">{{ radical.meaning }}</div>
-                                    <div class="mb-1 text-center text-lg">{{ radical.reading }}</div>
+                                    <div class="text-center text-lg">{{ execute(radical.meaning, ' ') }}</div>
+                                    <div class="mb-1 text-center text-lg">{{ execute(radical.reading, ' ')}}</div>
                                     <div class="text-center text-lg">{{ radical.strokes }}</div>
                                 </div>
                             </div>
