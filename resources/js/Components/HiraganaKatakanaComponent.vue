@@ -103,7 +103,12 @@ export default {
         },
         markAllCheckbox(){
             let $checkboxes = document.querySelectorAll("input");
-            $checkboxes.forEach( (e) => e.click());
+            $checkboxes.forEach( (e) => {
+                    if(!e.checked){
+                        e.click()
+                    }
+                }
+            );
         },
         checkMeaning(arr){
 
@@ -162,6 +167,7 @@ export default {
             <button class="bg-gray-200 p-1.5 rounded" @click="toggleAlphabet">Переключить алфавит</button>
             <button class="bg-gray-200 p-1.5 rounded" @click="changeVisibility(); takeRandomChr(activeAlphabet)">Начать</button>
             <button class="bg-gray-200 p-1.5 rounded" @click="markAllCheckbox">выбрать все</button>
+            <button class="bg-gray-200 p-1.5 rounded" @click="resetAll">очистить все</button>
         </div>
     </div>
     <div class="hidden training flex flex-col justify-center items-center">
