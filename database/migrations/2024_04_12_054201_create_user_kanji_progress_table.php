@@ -21,8 +21,8 @@ return new class extends Migration
             $table->index('kanji_id', 'kanji_user_kanji_idx');
             $table->index('user_id', 'kanji_user_user_idx');
 
-            $table->foreign('kanji_id', 'kanji_user_kanji_fk')->on('kanjis')->references('id');
-            $table->foreign('user_id', 'kanji_user_user_fk')->on('users')->references('id');
+            $table->foreign('kanji_id', 'user_kanji_kanji_fk')->on('kanjis')->references('id');
+            $table->foreign('user_id', 'user_kanji_user_fk')->on('users')->references('id');
         });
     }
 

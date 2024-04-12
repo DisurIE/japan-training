@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -44,4 +45,10 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function kanjiProgress() : belongsToMany
+    {
+        return $this->belongsToMany(Kanji::class, 'user_kanji_progress')
+            ->withPivot('progress')
+            ->withTimestamps();
+    }
 }
