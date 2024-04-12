@@ -22,14 +22,9 @@ export default {
         kanjis: Array
     },
     methods: {
-        truncate(text, length) {
-            if (text.length <= length) {
-                return text;
-            } else {
-                return text.slice(0, length) + '...';
-            }
-        },
-
+        execute(text, separator){
+            return text.split(separator)[0].replace(/[\s.,%]/g, '');
+        }
     },
     computed: {
         getLevels: function () {
@@ -69,8 +64,8 @@ export default {
                                 <div class="font-bold text-6xl text-center">{{ kanji.character }}</div>
                                 <div class="absolute inset-0 bg-gray-800 text-white opacity-0 transition duration-300 hover:opacity-100">
                                     <div class="flex flex-col justify-center h-full px-4 py-2">
-                                        <div class="mb-1 text-center text-lg">{{ kanji.onyomi }}</div>
-                                        <div class="text-center text-lg">{{ truncate(kanji.meaning, 20) }}</div>
+                                        <div class="mb-1 text-center text-lg">{{ execute(kanji.onyomi, ' ') }}</div>
+                                        <div class="text-center text-lg">{{ execute(kanji.meaning, ' ') }}</div>
                                         <div class="text-center text-lg">{{ kanji.level }}</div>
                                     </div>
                                 </div>
