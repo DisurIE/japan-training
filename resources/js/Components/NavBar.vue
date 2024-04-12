@@ -1,5 +1,5 @@
 <template>
-    <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-300 mb-3">
+    <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-300 dark:bg-gray-900">
         <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
             <div class="w-full relative flex justify-between md:w-auto  px-4 md:static md:block md:justify-start">
                 <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="/">
@@ -24,7 +24,7 @@
                         </NavLink>
                     </li>
                     <li class="nav-item">
-                        <NavLink class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" :href="route('kanjis.index')" :active="route().current('kanjis.index')">
+                        <NavLink class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 " :href="route('kanjis.index')" :active="route().current('kanjis.index')">
                             <i class="fab fa-twitter text-md leading-md text-white opacity-75" /><span class="ml-2">Кандзи</span>
                         </NavLink>
                     </li>

@@ -27,6 +27,7 @@ export default {
 </script>
 <template>
     <HeaderComponent/>
+    <Head title="Radicals" />
     <div class="container mx-auto p-4">
 
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
