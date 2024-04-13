@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\JsonHandler;
+use App\Http\Requests\KanjiRequest;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Kanji;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -38,22 +39,14 @@ class KanjiController extends Controller
     {
         return Inertia::render('Kanji/KanjisCreate');
     }
-    public function store(Request $request) : mixed
+    public function store(KanjiRequest $request) : mixed
     {
 
-        $create = Kanji::create($request->validate([
-            'character' => ['required', 'unique:kanjis'],
-            'meaning' => 'required',
-            'onyomi' => 'required',
-            'kunyomi' => 'required',
-            'important_reading' => 'required',
-            'level' => ['required', 'numeric'],
-        ]));
+        $create = $request->validated();
         if($create) {
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
         }
         else{
-            ////////////////////////////////////////
             return alert(500);
         }
     }
