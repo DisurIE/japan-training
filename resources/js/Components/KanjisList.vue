@@ -49,11 +49,10 @@ export default {
 
 
 <template>
-    <div>
         <div class="container mx-auto p-4">
             <!-- Вывод кандзи для каждого уровня -->
             <div v-for="(level, index) in getLevels" :key="index">
-                <h2>{{ level }}</h2>
+                <h2 class="bold">{{ level }}</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                     <!-- Отображение кандзи для текущего уровня -->
                     <div v-for="kanji in kanjiGroup[level]" :key="kanji.id">
@@ -73,7 +72,6 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 

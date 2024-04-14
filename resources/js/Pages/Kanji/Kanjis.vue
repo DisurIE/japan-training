@@ -4,6 +4,7 @@ import NavLink from "@/Components/NavLink.vue";
 import HeaderComponent from "@/Components/HeaderComponent.vue";
 import { onMounted } from 'vue';
 import KanjisList from "@/Components/KanjisList.vue";
+import GuestLayout from "@/Layouts/GuestLayout.vue";
 
 
 </script>
@@ -52,9 +53,9 @@ export default {
     <div>
         <HeaderComponent/>
         <Head title="Kanjis" />
-        <KanjisList :kanjis="kanjis">
-
-        </KanjisList>
+        <GuestLayout>
+            <KanjisList :kanjis="kanjis"></KanjisList>
+        </GuestLayout>
     </div>
 </template>
 
