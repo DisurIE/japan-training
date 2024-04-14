@@ -146,11 +146,11 @@ export default {
 <template>
     <div v-if="visibility">
         <div v-if="visibility" class="px-2 py-3 w-auto flex justify-center">
-            <table class=" text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <table class="text-left rtl:text-right text-gray-500 dark:text-gray-400">
 
                 <tbody>
                 <tr v-for="colIndex in 5" :key="colIndex">
-                    <td v-for="row in currentAlphabet" :key="row[colIndex - 1]" class="text-black border-2 border-gray-100 text-center text-3xl p-1">
+                    <td v-for="row in currentAlphabet" :key="row[colIndex - 1]" class="text-black border-2 border-gray-100 text-center text-5xl lg:text-5xl sm:text-4xl md:text-3xl p-1">
                         {{ row[colIndex - 1] }}
                     </td>
                 </tr>
@@ -163,11 +163,11 @@ export default {
                 </tbody>
             </table>
         </div>
-        <div class="content-center w-auto flex justify-center gap-3">
-            <button class="bg-gray-200 p-1.5 rounded" @click="toggleAlphabet">Переключить алфавит</button>
-            <button class="bg-gray-200 p-1.5 rounded" @click="changeVisibility(); takeRandomChr(activeAlphabet)">Начать</button>
-            <button class="bg-gray-200 p-1.5 rounded" @click="markAllCheckbox">выбрать все</button>
-            <button class="bg-gray-200 p-1.5 rounded" @click="resetAll">очистить все</button>
+        <div class="content-center w-auto flex flex-wrap justify-center gap-3">
+            <button class="bg-gray-200 p-2.5 lg:text-3xl sm:text-2xl rounded" @click="toggleAlphabet">Переключить алфавит</button>
+            <button class="bg-gray-200 p-1.5 lg:text-3xl sm:text-2xl rounded" @click="changeVisibility(); takeRandomChr(activeAlphabet)">Начать</button>
+            <button class="bg-gray-200 p-1.5 lg:text-3xl sm:text-2xl rounded" @click="markAllCheckbox">выбрать все</button>
+            <button class="bg-gray-200 p-1.5 lg:text-3xl sm:text-2xl rounded" @click="resetAll">очистить все</button>
         </div>
     </div>
     <div class="hidden training flex flex-col justify-center items-center">
@@ -177,8 +177,22 @@ export default {
         <input v-model="meanInput" class="input-meaning mt-4 px-4 py-2 border border-gray-300 rounded-md" @input="checkMeaning(activeAlphabet)" placeholder="Введите значение" type="text">
         <button @click="resetAll" class=" mt-2 bg-gray-200 p-1.5 rounded">Назад</button>
     </div>
+
 </template>
 
 <style scoped>
-
+@media (max-width: 640px) {
+    .text-5xl {
+        font-size: 1.875rem;
+    }
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+    .p-2\\.5 {
+        padding: 1.25rem;
+    }
+    .p-1\\.5 {
+        padding: 0.9375rem;
+    }
+}
 </style>
