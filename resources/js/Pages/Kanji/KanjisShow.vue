@@ -2,6 +2,7 @@
 import { Head, Link } from '@inertiajs/vue3';
 import NavLink from "@/Components/NavLink.vue";
 import HeaderComponent from "@/Components/HeaderComponent.vue";
+import RadicalsList from "@/Components/RadicalsList.vue";
 
 defineProps({
     kanji: Object,
@@ -25,10 +26,9 @@ defineProps({
                 <div class="text-2xl">Level: {{ kanji.level }}</div>
             </div>
         </div>
+        <h2 class="container mx-auto p-4">ключи этого кандзи</h2>
+        <RadicalsList :radicals="radicals"></RadicalsList>
 
-            <div v-for="radical in radicals">
-                {{ radical.character }}
-            </div>
 
     </Layout>
 </template>
