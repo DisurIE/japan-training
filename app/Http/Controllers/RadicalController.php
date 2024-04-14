@@ -27,7 +27,8 @@ class RadicalController extends Controller
     public function show(Radical $radical)
     {
         return Inertia::render('RadicalsShow', [
-            'radical' => $radical
+            'radical' => $radical,
+            'kanjis' => Radical::find($radical->id)->kanjis()->orderBy('id')->get(),
         ]);
     }
 }

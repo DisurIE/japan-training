@@ -50,6 +50,7 @@ export default {
                     </div>
                 </div>
         </div>
+        
     </GuestLayout>
 </template>
 

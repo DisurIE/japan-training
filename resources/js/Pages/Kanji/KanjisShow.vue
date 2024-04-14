@@ -15,13 +15,15 @@ defineProps({
         <Head title="Kanjis" />
         <HeaderComponent/>
         <div class="bg-blue-400 flex-auto p-2.5 max-w-auto p-7">
-            <div class="font-bold text-7xl" >
-                {{ kanji.character }}
+            <div class="container mx-auto p-4">
+                <div class="font-bold text-7xl" >
+                    {{ kanji.character }}
+                </div>
+                <div class="text-2xl">{{ kanji.meaning }}</div>
+                <div class="text-2xl">onyomi: {{ kanji.onyomi }}</div>
+                <div class="text-2xl">kunyomi: {{ kanji.kunyomi }}</div>
+                <div class="text-2xl">Level: {{ kanji.level }}</div>
             </div>
-            <div class="text-2xl">{{ kanji.meaning }}</div>
-            <div class="text-2xl">onyomi: {{ kanji.onyomi }}</div>
-            <div class="text-2xl">kunyomi: {{ kanji.kunyomi }}</div>
-            <div class="text-2xl">Level: {{ kanji.level }}</div>
         </div>
 
             <div v-for="radical in radicals">

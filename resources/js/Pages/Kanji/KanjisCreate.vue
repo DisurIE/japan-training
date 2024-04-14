@@ -56,7 +56,6 @@ export default {
                     important_reading: form.important_reading,
                     level: form.level,
                 }
-
         }
         const submit = () => {
             if(props.kanji !== undefined) {
