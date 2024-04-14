@@ -5,11 +5,12 @@
                 <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="/">
                     Japan Training
                 </a>
-                <button class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-black border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none" type="button" v-on:click="toggleNavbar()">
-                    <i class="fas fa-bars ">
-
-                    </i>
+                <button class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-black border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none" type="button" @click="toggleNavbar()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
                 </button>
+
             </div>
             <div v-bind:class="{'hidden': !showMenu, 'flex': showMenu}" class="md:flex md:flex-grow items-center">
                 <ul class="flex flex-col md:flex-row list-none ml-auto">
