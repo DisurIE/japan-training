@@ -41,7 +41,6 @@ class KanjiController extends Controller
     }
     public function store(KanjiRequest $request) : mixed
     {
-        dd($request);
         $create = Kanji::create($request->validated());
         if($create) {
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
