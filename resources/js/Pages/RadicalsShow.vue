@@ -30,7 +30,7 @@ export default {
             <div class="text-2xl">Strokes: {{ radical.strokes }}</div>
         </div>
     </div>
-        <div class="container mx-auto p-4">Kanjis</div>
+        <div class="container mx-auto p-4">Кандзи в которых используется этот ключ</div>
         <KanjisList :kanjis="kanjis"></KanjisList>
 
 </template>
