@@ -41,9 +41,9 @@ class KanjiController extends Controller
     }
     public function store(KanjiRequest $request) : mixed
     {
-
-        $isCreated = $request->validated();
-        if($isCreated) {
+        dd($request);
+        $create = Kanji::create($request->validated());
+        if($create) {
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
         }
         else{
@@ -58,19 +58,22 @@ class KanjiController extends Controller
         ]);
     }
 
-    public function update(KanjiRequest $request) : mixed
+    public function update(Request $request, Kanji $kanji) : mixed
     {
-        //dd($request);
-
-//        return abort(500);
-        $kanji = Kanji::where('character', '=', $request['character'])->first();
-        $isUpdated = $kanji->update($request->validated());
-        if($isUpdated) {
-            return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
+        //dd($kanji);
+        $update = $kanji->update($request->validate([
+            'character' => ['required'],
+            'meaning' => 'required',
+            'onyomi' => 'required',
+            'kunyomi' => 'required',
+            'important_reading' => 'required',
+            'level' => ['required', 'numeric'],
+        ]));
+        if($update) {
+            return redirect()->route('kanjis.edit', $kanji["character"])->with('success', 'Kanji created succesfully');
         }
         else{
-            ////////////////////////////////////////
-            return abort(500);
+            return alert(500);
         }
     }
 
