@@ -22,7 +22,7 @@ class KanjiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'character' => ['required', 'unique:kanjis'],
+            'character' => ['required'],
             'meaning' => 'required',
             'onyomi' => 'required',
             'kunyomi' => 'required',

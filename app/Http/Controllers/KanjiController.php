@@ -57,17 +57,10 @@ class KanjiController extends Controller
         ]);
     }
 
-    public function update(Request $request, Kanji $kanji) : mixed
+    public function update(KanjiRequest $request, Kanji $kanji) : mixed
     {
-        //dd($kanji);
-        $update = $kanji->update($request->validate([
-            'character' => ['required'],
-            'meaning' => 'required',
-            'onyomi' => 'required',
-            'kunyomi' => 'required',
-            'important_reading' => 'required',
-            'level' => ['required', 'numeric'],
-        ]));
+
+        $update = $kanji->update($request->validated());
         if($update) {
             return redirect()->route('kanjis.edit', $kanji["character"])->with('success', 'Kanji created succesfully');
         }
