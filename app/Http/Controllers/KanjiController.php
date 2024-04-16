@@ -28,7 +28,6 @@ class KanjiController extends Controller
 
     public function show(Kanji $kanji) : Response
     {
-       // dd(Kanji::find($kanji->id)->radicals()->orderBy('id')->get());
         return Inertia::render('Kanji/KanjisShow', [
             'kanji' => $kanji,
             'radicals' => Kanji::find($kanji->id)->radicals()->orderBy('id')->get(),
@@ -42,6 +41,7 @@ class KanjiController extends Controller
     public function store(KanjiRequest $request) : mixed
     {
         $create = Kanji::create($request->validated());
+
         if($create) {
             return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
         }
@@ -59,8 +59,8 @@ class KanjiController extends Controller
 
     public function update(KanjiRequest $request, Kanji $kanji) : mixed
     {
-
         $update = $kanji->update($request->validated());
+
         if($update) {
             return redirect()->route('kanjis.edit', $kanji["character"])->with('success', 'Kanji created succesfully');
         }
