@@ -20,7 +20,7 @@ class IndexController extends Controller
     public function __invoke(Radical $radicals) : Response
     {
         //JsonHandler::addRadicalsToDatabaseFromJson("radicals.json");
-        return Inertia::render('Radicals', [
+        return Inertia::render('Radical/Radicals', [
             'radicals' => $radicals->all()
         ]);
     }

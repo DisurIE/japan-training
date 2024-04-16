@@ -19,7 +19,7 @@ class ShowController extends Controller
 {
     public function __invoke(Radical $radical) : Response
     {
-        return Inertia::render('RadicalsShow', [
+        return Inertia::render('Radical/RadicalsShow', [
             'radical' => $radical,
             'kanjis' => Radical::find($radical->id)->kanjis()->orderBy('id')->get(),
         ]);
