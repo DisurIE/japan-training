@@ -26,11 +26,15 @@ it('renders public pages', function (string $path, string $component) {
     ],
     [
         'path' => '/radicals',
-        'component' => 'Radicals',
+        'component' => 'Radical/Radicals',
     ],
     [
         'path' => '/radicals/儿',
-        'component' => 'RadicalsShow',
+        'component' => 'Radical/RadicalsShow',
+    ],
+    [
+        'path' => '/radicals/create',
+        'component' => 'Radical/RadicalsCreateEdit',
     ],
     [
         'path' => '/hiragana-katakana',

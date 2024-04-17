@@ -24,6 +24,7 @@ Route::get('/hiragana-katakana', [Ctr\HiraganaKatakanaController::class, 'index'
 
 Route::group(['namespace' => 'App\Http\Controllers\Radical'], function (){
     Route::get('/radicals', 'IndexController')->name('radicals.index');
+    Route::post('/radicals', 'StoreController')->name('radicals.store');
     Route::get('/radicals/create', 'CreateController')->name('radicals.create');
     Route::get('/radicals/{radical:character}', 'ShowController')->name('radicals.show');
 });
