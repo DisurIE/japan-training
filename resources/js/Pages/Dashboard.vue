@@ -13,9 +13,9 @@ import NavLink from "@/Components/NavLink.vue";
                 <div class="p-5 my-2 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <NavLink :href="route('dashboard.sentences.index')" :active="route().current('dashboard.sentences.index')">Учить предложения</NavLink>
                 </div>
-<!--                <div class="p-5 my-2 bottom-0.5 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <NavLink :href="route('dashboard.sentences.index')" :active="route().current('dashboard.sentences.index')">Учить предложения</NavLink>
-                </div>-->
+                <div class="p-5 my-2 bottom-0.5 bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <NavLink :href="route('dashboard.kanjis.index')" :active="route().current('dashboard.kanjis.index')">Учить кандзи</NavLink>
+                </div>
             </div>
         </div>
     </AuthenticatedLayout>
