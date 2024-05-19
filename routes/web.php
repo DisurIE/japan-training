@@ -37,9 +37,8 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/sentences',[Ctr\ProfileSentecesController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.sentences.index');
 Route::get('/dashboard/sentences/{name}',[Ctr\ProfileSentecesController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.sentences.show');
 
-Route::get('/dashboard/kanjis', function () {
-    return Inertia::render('DashboardKanjis');
-})->middleware(['auth', 'verified'])->name('dashboard.kanjis.index');
+Route::get('/dashboard/kanjis',[Ctr\ProfileKanjisController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.index');
+Route::get('/dashboard/kanjis/{level}',[Ctr\ProfileKanjisController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.show');
 
 
 Route::middleware('auth')->group(function () {

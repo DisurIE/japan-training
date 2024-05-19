@@ -6,7 +6,7 @@ import NavLink from "@/Components/NavLink.vue";
 <script>
 export default {
     props: {
-        levels: Array
+        kanjisByLevel: Array
     },
 }
 </script>
@@ -22,7 +22,12 @@ export default {
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div  class="flex flex-wrap justify-center">
-                            <NavLink v-for="level in levels" :href="'kanjis/' + level"><div class="bg-gray-200 dark:bg-gray-700 m-2 p-4 text-center" style="width: 100px;">{{ level }}</div></NavLink>
+                            <div v-for="kanji in kanjisByLevel" class="bg-gray-200 dark:bg-gray-700 m-2 p-4 text-center" style="width: 100px;">{{ kanji.character }}</div>
+                    </div>
+                    <div class="flex items-center justify-center pt-3 bg-gray-100 dark:bg-gray-900">
+                        <a href="/" class="px-10 p-3 bg-blue-300 text-white font-semibold rounded-lg shadow-md hover:bg-blue-400 transition duration-300">
+                            Учить
+                        </a>
                     </div>
                 </div>
             </div>
