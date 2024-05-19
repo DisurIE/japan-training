@@ -47,7 +47,7 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
-    redis:
+    redis3:
         image: 'redis:alpine'
         ports:
             - '${FORWARD_REDIS_PORT:-6379}:6379'
@@ -70,3 +70,4 @@ volumes:
         driver: local
     sail-redis-japan:
         driver: local
+

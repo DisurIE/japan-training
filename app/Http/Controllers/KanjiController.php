@@ -10,6 +10,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -21,8 +22,15 @@ class KanjiController extends Controller
     {
         //JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
         //JsonHandler::addRelationshipsRadicalsKanjis("radicals.json");
+        if (!Cache::has('kanjis')){
+            $kanjis = Kanji::all();
+            Cache::put('kanjis', $kanjis, 3600);
+        }
+        else {
+            $kanjis = Cache::get('kanjis');
+        }
         return Inertia::render('Kanji/Kanjis', [
-            'kanjis' => $kanjis->all()
+            'kanjis' => $kanjis
         ]);
     }
 
