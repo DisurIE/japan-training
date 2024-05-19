@@ -6,7 +6,6 @@ import NavLink from "@/Components/NavLink.vue";
 <script>
 export default {
     props: {
-        levels: Array,
         name: String
     },
 }

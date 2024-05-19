@@ -22,16 +22,16 @@ class KanjiController extends Controller
     {
         //JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
         //JsonHandler::addRelationshipsRadicalsKanjis("radicals.json");
-        if (!Cache::has('kanjis')){
-            $kanjis = Kanji::all();
-            Cache::put('kanjis', $kanjis, 3600);
-        }
-        else {
-            $kanjis = Cache::get('kanjis');
-        }
-        return Inertia::render('Kanji/Kanjis', [
-            'kanjis' => $kanjis
-        ]);
+            if(Cache::has('kanjis')){
+                return Inertia::render('Kanji/Kanjis', [
+                    'kanjis' => Cache::get('kanjis')
+                ]);
+            }
+            $kanjis2 = Kanji::all();
+            Cache::put('kanjis', $kanjis2, 3600);
+            return Inertia::render('Kanji/Kanjis', [
+                'kanjis' => $kanjis2
+            ]);
     }
 
     public function show(Kanji $kanji) : Response

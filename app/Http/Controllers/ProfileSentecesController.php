@@ -21,7 +21,6 @@ class ProfileSentecesController extends Controller
     public function show($name)
     {
         return Inertia::render('DashboardSentencesShow', [
-            'levels' => Level::all(),
             'name' => $name
         ]);
     }
