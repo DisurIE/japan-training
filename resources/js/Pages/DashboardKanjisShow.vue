@@ -9,7 +9,7 @@ import NavLink from "@/Components/NavLink.vue";
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Dashboard</h2>
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">{{level}}</h2>
         </template>
 
         <div class="py-12">
@@ -49,7 +49,8 @@ import NavLink from "@/Components/NavLink.vue";
 <script>
 export default {
     props: {
-        kanjisByLevel: Array
+        kanjisByLevel: Array,
+        level: Object
     },
     data() {
         return {
@@ -79,16 +80,15 @@ export default {
             this.feedback = '';
         },
         checkAnswer() {
-            if (this.userAnswer.trim().toLowerCase() === this.currentKanji.meaning.toLowerCase()) {
-                this.feedback = 'Верно!';
-                this.currentIndex++;
-                this.userAnswer = '';
-                if (this.currentIndex >= this.kanjisByLevel.length) {
-                    this.currentIndex = null;
+            for (var i = 0; i < this.currentKanji.meaning.length; i++) {
+                if (this.userAnswer.trim().toLowerCase() === this.currentKanji.meaning[i].toLowerCase()) {
+                    this.feedback = 'Верно!';
+                    this.currentIndex++;
+                    this.userAnswer = '';
+                    return
                 }
-            } else {
-                this.feedback = 'Неверно. Попробуйте еще раз.';
             }
+            this.feedback = 'Неверно. Попробуйте еще раз.';
         }
     }
 }

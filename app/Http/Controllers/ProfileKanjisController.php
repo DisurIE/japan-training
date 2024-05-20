@@ -24,8 +24,13 @@ class ProfileKanjisController extends Controller
     public function show($level)
     {
         $kanjisByLevel = Kanji::where('level', $level)->get();
+        foreach ($kanjisByLevel as $key => $kanji){
+            $kanjisByLevel[$key]['meaning'] = explode(', ', $kanji->meaning);
+        }
+
         return Inertia::render('DashboardKanjisShow', [
-            'kanjisByLevel' => $kanjisByLevel
+            'kanjisByLevel' => $kanjisByLevel,
+            'level' => $level
         ]);
     }
 }
