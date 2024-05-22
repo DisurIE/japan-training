@@ -27,6 +27,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Radical'], function (){
     Route::post('/radicals', 'StoreController')->name('radicals.store');
     Route::get('/radicals/create', 'CreateController')->name('radicals.create');
     Route::get('/radicals/{radical:character}', 'ShowController')->name('radicals.show');
+    Route::put('/radicals/{radical}', 'UpdateController')->name('radicals.update');
+    Route::get('/radicals/{radical:character}/edit', 'EditController')->name('radicals.edit');
 });
 
 

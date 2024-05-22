@@ -16,14 +16,16 @@ use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class StoreController extends BaseController
+class UpdateController extends BaseController
 {
-    public function __invoke(StoreRequest $request)
+    public function __invoke(StoreRequest $request, $radical)
     {
         //dd($request->validated());
-        $create = Radical::insert($request->validated());
-
-        if($create) {
+        $radical2 = Radical::where('id', $radical)->first();
+        //dd($radical2);
+        $update = $radical2->update($request->validated());
+        dd($update);
+        if($update) {
             return redirect()->route('radicals.index')->with('success', 'Radical created succesfully');
         }
         else{

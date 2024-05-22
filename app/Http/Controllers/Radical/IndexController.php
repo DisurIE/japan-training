@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     public function __invoke(Radical $radicals) : Response
     {

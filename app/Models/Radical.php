@@ -15,5 +15,5 @@ class Radical extends Model
     }
 
     protected $table = 'radicals';
-    protected $fillable = ['character'];
+    protected $fillable = ['character', 'meaning', 'reading', 'image', 'kanjis', 'strokes'];
 }

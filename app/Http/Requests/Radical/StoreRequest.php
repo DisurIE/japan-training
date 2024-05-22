@@ -23,10 +23,10 @@ class StoreRequest extends FormRequest
     {
         return [
             'character' => ['required'],
-            'meaning' => 'required',
-            'reading' => 'required',
-            'image' => 'required',
-            'kanjis' => 'required',
+            'meaning' => ['required'],
+            'reading' => ['required'],
+            'image' => ['required'],
+            'kanjis' => ['required'],
             'strokes' => ['required', 'numeric'],
         ];
     }
