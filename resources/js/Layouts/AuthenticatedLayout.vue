@@ -9,7 +9,9 @@ import { Link } from '@inertiajs/vue3';
 
 const showingNavigationDropdown = ref(false);
 </script>
+<script>
 
+</script>
 <template>
     <div>
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -37,6 +39,7 @@ const showingNavigationDropdown = ref(false);
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
                             <!-- Settings Dropdown -->
+
                             <div class="ms-3 relative">
                                 <Dropdown align="right" width="48">
                                     <template #trigger>

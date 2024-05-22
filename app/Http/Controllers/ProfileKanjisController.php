@@ -32,8 +32,9 @@ class ProfileKanjisController extends Controller
         foreach ($kanjisByLevel as $key => $kanji){
             $kanjisByLevel[$key]['meaning'] = explode(', ', $kanji->meaning);
         }
-
         return Inertia::render('DashboardKanjisShow', [
+            'learnedKanjis' => Auth::user()->learned_kanjis,
+            'allKanjis' => DB::table('kanjis')->count(),
             'kanjisByLevel' => $kanjisByLevel,
             'level' => $level
         ]);

@@ -9,7 +9,9 @@ import NavLink from "@/Components/NavLink.vue";
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">{{level}}</h2>
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                Прогресс: {{ learnedKanjis }} / {{allKanjis}}
+            </h2>
         </template>
 
         <div class="py-12">
@@ -29,6 +31,7 @@ import NavLink from "@/Components/NavLink.vue";
                     </div>
 
                     <div v-else class="p-6">
+
                         <div v-if="currentKanji" class="text-center">
                             <div class="text-4xl mb-4">{{ currentKanji.character }}</div>
                             <input v-model="userAnswer" type="text" placeholder="Введите значение" class="border p-2 rounded-lg mb-4 w-full" />
@@ -53,7 +56,9 @@ import {router} from "@inertiajs/vue3";
 export default {
     props: {
         kanjisByLevel: Array,
-        level: Object
+        level: Object,
+        allKanjis: Object,
+        learnedKanjis: Object
     },
     data() {
         return {
