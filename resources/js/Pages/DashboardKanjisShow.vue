@@ -18,7 +18,7 @@ import NavLink from "@/Components/NavLink.vue";
                     <div v-if="!showTrainer" class="p-6">
                         <div class="flex flex-wrap justify-center">
                             <div v-for="kanji in kanjisByLevel" :key="kanji.character" class="bg-gray-200 dark:bg-gray-700 m-2 p-4 text-center" style="width: 100px;">
-                                {{ kanji.character }}
+                               {{kanji.character}}
                             </div>
                         </div>
                         <div class="flex items-center justify-center pt-3 bg-gray-100 dark:bg-gray-900">
@@ -47,6 +47,9 @@ import NavLink from "@/Components/NavLink.vue";
 </template>
 
 <script>
+import Kanjis from "@/Pages/Kanji/Kanjis.vue";
+import {router} from "@inertiajs/vue3";
+
 export default {
     props: {
         kanjisByLevel: Array,
@@ -82,6 +85,10 @@ export default {
         checkAnswer() {
             for (var i = 0; i < this.currentKanji.meaning.length; i++) {
                 if (this.userAnswer.trim().toLowerCase() === this.currentKanji.meaning[i].toLowerCase()) {
+                    console.log(this.currentKanji.character)
+                    router.post('/dashboard/kanjis/1', {
+                        'kanji': this.currentKanji.character,
+                    });
                     this.feedback = 'Верно!';
                     this.currentIndex++;
                     this.userAnswer = '';

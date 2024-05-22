@@ -40,6 +40,8 @@ Route::get('/dashboard/sentences/{name}',[Ctr\ProfileSentecesController::class, 
 Route::get('/dashboard/kanjis',[Ctr\ProfileKanjisController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.index');
 Route::get('/dashboard/kanjis/{level}',[Ctr\ProfileKanjisController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.show');
 
+Route::post('/dashboard/kanjis/{level}',[Ctr\ProfileKanjisController::class, 'store'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.store');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
