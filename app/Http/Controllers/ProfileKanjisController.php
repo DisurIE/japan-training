@@ -20,7 +20,7 @@ class ProfileKanjisController extends Controller
 
     public function index()
     {
-        $levels = Kanji::select('level')->distinct()->pluck('level');
+        $levels = Kanji::select('level')->distinct()->orderBy('level', 'asc')->pluck('level');
         //dd($levels);
         return Inertia::render('DashboardKanjis', [
             'levels' => $levels

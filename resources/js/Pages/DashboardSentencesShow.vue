@@ -27,7 +27,7 @@ export default {
                         <button
                             v-for="option in exercise.options"
                             :key="option.id"
-<!--                            @click="checkAnswer(exercise.id, option.text)"-->
+                            @click="checkAnswer(exercise.id, option.text)"
                             class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
                         >
                             {{ option.text }}

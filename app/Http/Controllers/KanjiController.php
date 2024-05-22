@@ -11,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -18,7 +19,7 @@ use function Laravel\Prompts\alert;
 
 class KanjiController extends Controller
 {
-    public function index(Kanji $kanjis) : Response
+    public function index() : Response
     {
         //JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
         //JsonHandler::addRelationshipsRadicalsKanjis("radicals.json");
@@ -27,10 +28,10 @@ class KanjiController extends Controller
                     'kanjis' => Cache::get('kanjis')
                 ]);
             }
-            $kanjis2 = Kanji::all();
-            Cache::put('kanjis', $kanjis2, 3600);
+            $kanjis = Kanji::all();
+            Cache::put('kanjis', $kanjis, 3600);
             return Inertia::render('Kanji/Kanjis', [
-                'kanjis' => $kanjis2
+                'kanjis' => $kanjis
             ]);
     }
 
@@ -67,13 +68,17 @@ class KanjiController extends Controller
 
     public function update(KanjiRequest $request, Kanji $kanji) : mixed
     {
-        $update = $kanji->update($request->validated());
+        try {
+            $update = $kanji->update($request->validated());
 
-        if($update) {
-            return redirect()->route('kanjis.edit', $kanji["character"])->with('success', 'Kanji created succesfully');
-        }
-        else{
-            return alert(500);
+            if ($update) {
+                return redirect()->route('kanjis.edit', $kanji["character"])->with('success', 'Kanji updated successfully');
+            } else {
+                return redirect()->route('kanjis.edit', $kanji["character"])->with('error', 'Failed to update kanji');
+            }
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+            return redirect()->route('kanjis.edit', $kanji["character"])->with('error', 'An error occurred while updating kanji');
         }
     }
 

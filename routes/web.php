@@ -33,15 +33,18 @@ Route::group(['namespace' => 'App\Http\Controllers\Radical'], function (){
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::group(['namespace' => 'App\Http\Controllers\Exercise'], function () {
-    Route::get('/dashboard/sentences', 'IndexController')->middleware(['auth', 'verified'])->name('dashboard.exercise.index');
-    Route::get('/dashboard/sentences/{level}', 'ShowController')->middleware(['auth', 'verified'])->name('dashboard.exercise.show');
+    Route::get('/dashboard/sentences', 'IndexController')->name('dashboard.exercise.index');
+    Route::get('/dashboard/sentences/{level}', 'ShowController')->name('dashboard.exercise.show');
+    Route::post('/dashboard/sentences/{level}', 'StoreController')->name('dashboard.exercise.store');
+})->middleware(['auth', 'verified']);
+
+Route::group(['prefix' => '/dashboard/kanjis'], function () {
+    Route::get('/',[Ctr\ProfileKanjisController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.index');
+    Route::get('/{level}',[Ctr\ProfileKanjisController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.show');
+    Route::post('/{level}',[Ctr\ProfileKanjisController::class, 'store'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.store');
 });
-Route::get('/dashboard/kanjis',[Ctr\ProfileKanjisController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.index');
-Route::get('/dashboard/kanjis/{level}',[Ctr\ProfileKanjisController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.show');
-
-Route::post('/dashboard/kanjis/{level}',[Ctr\ProfileKanjisController::class, 'store'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.store');
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
