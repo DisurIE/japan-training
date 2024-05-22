@@ -33,10 +33,10 @@ Route::group(['namespace' => 'App\Http\Controllers\Radical'], function (){
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/dashboard/sentences',[Ctr\ProfileSentecesController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.sentences.index');
-Route::get('/dashboard/sentences/{name}',[Ctr\ProfileSentecesController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.sentences.show');
-
+Route::group(['namespace' => 'App\Http\Controllers\Exercise'], function () {
+    Route::get('/dashboard/sentences', 'IndexController')->middleware(['auth', 'verified'])->name('dashboard.exercise.index');
+    Route::get('/dashboard/sentences/{name}', 'ShowController')->middleware(['auth', 'verified'])->name('dashboard.exercise.show');
+});
 Route::get('/dashboard/kanjis',[Ctr\ProfileKanjisController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.index');
 Route::get('/dashboard/kanjis/{level}',[Ctr\ProfileKanjisController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard.kanjis.show');
 
