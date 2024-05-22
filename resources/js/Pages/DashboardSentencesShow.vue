@@ -6,7 +6,8 @@ import NavLink from "@/Components/NavLink.vue";
 <script>
 export default {
     props: {
-        name: String
+        name: String,
+        exercises: Object,
     },
 }
 </script>
@@ -18,14 +19,22 @@ export default {
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">Dashboard</h2>
         </template>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div>
-                        {{name}}
+            <div class="container mx-auto p-4">
+                <h1 class="text-2xl font-bold mb-4">Japanese Grammar Exercises</h1>
+                <div v-for="exercise in exercises" :key="exercise.id" class="mb-4 p-4 border rounded-lg shadow-md">
+                    <p class="mb-2 text-lg">{{ exercise.text }}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                        <button
+                            v-for="option in exercise.options"
+                            :key="option.id"
+<!--                            @click="checkAnswer(exercise.id, option.text)"-->
+                            class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+                        >
+                            {{ option.text }}
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
+
     </AuthenticatedLayout>
 </template>

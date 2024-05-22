@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('japanese_grammar_exercises', function (Blueprint $table) {
             $table->id();
-            $table->text('exercise_text'); // текст упражнения с пропусками
-            $table->text('correct_answer'); // правильный ответ
-            $table->enum('level', ['N1', 'N2', 'N3', 'N4', 'N5']); // уровень
+            $table->text('text');
+            $table->text('answer');
+            $table->enum('level', ['N1', 'N2', 'N3', 'N4', 'N5']);
             $table->timestamps();
         });
 
         Schema::create('japanese_grammar_exercise_options', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('exercise_id');
-            $table->text('option_text'); // текст варианта ответа
+            $table->text('text');
             $table->timestamps();
 
             $table->foreign('exercise_id')->references('id')->on('japanese_grammar_exercises')->onDelete('cascade');
