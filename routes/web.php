@@ -39,7 +39,7 @@ Route::get('/dashboard', function () {
 Route::group(['namespace' => 'App\Http\Controllers\Exercise'], function () {
     Route::get('/dashboard/sentences', 'IndexController')->name('dashboard.exercise.index');
     Route::get('/dashboard/sentences/{level}', 'ShowController')->name('dashboard.exercise.show');
-    Route::post('/dashboard/sentences/{level}', 'StoreController')->name('dashboard.exercise.store');
+    Route::post('/dashboard/sentences/{id}', 'StoreController')->name('dashboard.exercise.store');
 })->middleware(['auth', 'verified']);
 
 Route::group(['prefix' => '/dashboard/kanjis'], function () {

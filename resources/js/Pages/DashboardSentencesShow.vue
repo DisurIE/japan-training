@@ -4,11 +4,21 @@ import { Head } from '@inertiajs/vue3';
 import NavLink from "@/Components/NavLink.vue";
 </script>
 <script>
+import {router} from "@inertiajs/vue3";
+
 export default {
     props: {
         name: String,
         exercises: Object,
     },
+    methods: {
+        checkAnswer(exerciseId, optionText, name){
+            router.post('/dashboard/sentences/' + name, {
+                'id' : exerciseId,
+                'optionText' : optionText
+            });
+        }
+    }
 }
 </script>
 <template>
@@ -27,7 +37,7 @@ export default {
                         <button
                             v-for="option in exercise.options"
                             :key="option.id"
-                            @click="checkAnswer(exercise.id, option.text)"
+                            @click="checkAnswer(exercise.id, option.text, name)"
                             class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
                         >
                             {{ option.text }}

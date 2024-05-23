@@ -91,7 +91,7 @@ export default {
             for (var i = 0; i < this.currentKanji.meaning.length; i++) {
                 if (this.userAnswer.trim().toLowerCase() === this.currentKanji.meaning[i].toLowerCase()) {
                     console.log(this.currentKanji.character)
-                    router.post('/dashboard/kanjis/1', {
+                    router.post('/dashboard/kanjis/' + this.currentKanji.id, {
                         'kanji': this.currentKanji.character,
                     });
                     this.feedback = 'Верно!';
