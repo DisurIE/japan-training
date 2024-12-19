@@ -1,16 +1,13 @@
 <?php
 
-use App\Helpers\JsonHandler;
 use App\Http\Controllers as Ctr;
 use App\Http\Controllers\ProfileController;
-use App\Models\Kanji;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', [Ctr\MainController::class, 'index'])->name('main.index');
 
-Route::controller(Ctr\KanjiController::class)->group(function () {
+Route::controller(\App\Kanji\Controllers\KanjiController::class)->group(function () {
     Route::get('/kanjis', 'index')->name('kanjis.index');
     Route::get('/kanjis/create', 'create')->name('kanjis.create')->middleware('auth');
     Route::get('/kanjis/{kanji:character}/edit', 'edit')->name('kanjis.edit')->middleware('auth');

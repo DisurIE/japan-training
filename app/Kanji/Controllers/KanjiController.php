@@ -1,33 +1,36 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Kanji\Controllers;
 
-use App\Helpers\JsonHandler;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\KanjiRequest;
-use App\Http\Requests\ProfileUpdateRequest;
+use App\Kanji\Actions\CreateKanjiAction;
+use App\Kanji\Queries\KanjiQueries;
 use App\Models\Kanji;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Exception;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
 use function Laravel\Prompts\alert;
 
 class KanjiController extends Controller
 {
+    public function __construct(
+       private readonly KanjiQueries $kanjiQueries
+    ) {
+    }
+
     public function index() : Response
     {
-            if(Cache::has('kanjis')){
+            /*if(Cache::has('kanjis')){
                 return Inertia::render('Kanji/Kanjis', [
                     'kanjis' => Cache::get('kanjis')
                 ]);
-            }
-            $kanjis = Kanji::all();
-            Cache::put('kanjis', $kanjis, 3600);
+            }*/
+            $kanjis = $this->kanjiQueries->getAll();
+            //Cache::put('kanjis', $kanjis, 3600);
             return Inertia::render('Kanji/Kanjis', [
                 'kanjis' => $kanjis
             ]);
@@ -45,19 +48,12 @@ class KanjiController extends Controller
     {
         return Inertia::render('Kanji/KanjisCreate');
     }
-    public function store(KanjiRequest $request) : mixed
+    public function store(KanjiRequest $request, CreateKanjiAction $action) : Model
     {
-        $create = Kanji::create($request->validated());
-
-        if($create) {
-            return redirect()->route('kanjis.index')->with('success', 'Kanji created succesfully');
-        }
-        else{
-            return alert(500);
-        }
+        return $action->execute($request);
     }
 
-    public function edit(Kanji $kanji)
+    public function edit(Kanji $kanji): Response
     {
         return Inertia::render('Kanji/KanjisCreate', [
             'kanji' => $kanji,
@@ -74,7 +70,7 @@ class KanjiController extends Controller
             } else {
                 return redirect()->route('kanjis.edit', $kanji["character"])->with('error', 'Failed to update kanji');
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error($e->getMessage());
             return redirect()->route('kanjis.edit', $kanji["character"])->with('error', 'An error occurred while updating kanji');
         }

@@ -15,6 +15,6 @@ class InitKanjisCommand extends Command
     public function handle(): void
     {
         JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
-        JsonHandler::addRelationshipsRadicalsKanjis("radicals.json");
+        JsonHandler::addRelationshipsRadicalsKanjis();
     }
 }
