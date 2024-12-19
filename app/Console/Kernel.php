@@ -2,11 +2,19 @@
 
 namespace App\Console;
 
+use App\Kanji\Commands\InitKanjisCommand;
+use App\Radical\Commands\InitRadicalsCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+
+    protected $commands = [
+        InitKanjisCommand::class,
+        InitRadicalsCommand::class
+    ];
+
     /**
      * Define the application's command schedule.
      */

@@ -21,8 +21,6 @@ class KanjiController extends Controller
 {
     public function index() : Response
     {
-        //JsonHandler::addKanjisToDatabaseFromJson("kanjis.json");
-        //JsonHandler::addRelationshipsRadicalsKanjis("radicals.json");
             if(Cache::has('kanjis')){
                 return Inertia::render('Kanji/Kanjis', [
                     'kanjis' => Cache::get('kanjis')

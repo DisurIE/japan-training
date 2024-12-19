@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\JsonHandler;
 use App\Models\Kanji;
 use App\Models\Level;
 use App\Models\User;
