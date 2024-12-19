@@ -6,22 +6,25 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class JapaneseGrammarExercise extends Model
+class Exercise extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['exercise_text', 'correct_answer', 'level'];
+    protected $fillable = [
+        'exercise_text',
+        'correct_answer',
+        'level'
+    ];
 
     public function options()
     {
-        return $this->hasMany(JapaneseGrammarExerciseOption::class, 'exercise_id');
+        return $this->hasMany(ExerciseOption::class, 'exercise_id');
     }
-    public static function getEnumValues($field)
+    public static function getEnumValues($field): array
     {
         $levels = DB::select("SHOW COLUMNS FROM japanese_grammar_exercises WHERE Field = 'level'");
 
         preg_match("/^enum\('(.*)'\)$/", $levels[0]->Type, $matches);
-        $enumValues = explode("','", $matches[1]);
-        return $enumValues;
+        return explode("','", $matches[1]);
     }
 }

@@ -6,7 +6,7 @@ use App\Models\Radical;
 use Illuminate\Support\Facades\File;
 class JsonHandler
 {
-    public static function addKanjisToDatabaseFromJson(string $path)
+    public static function addKanjisToDatabaseFromJson(string $path): void
     {
         $contents = File::get(base_path($path));
         $json = json_decode($contents, true);
@@ -57,25 +57,20 @@ class JsonHandler
         $contents = File::get(base_path($path));
         $json = json_decode($contents, true);
         $arrayRadicals = self::getArrayFromJsonRadicals($json);
-        echo '<pre>';
-        print_r($arrayRadicals);
-        echo '</pre>';
+
         $chunkedData = array_chunk($arrayRadicals, 30); // Разбиваем массив на части
 
         foreach ($chunkedData as $chunk) {
-            Radical::insertOrIgnore($chunk);
+            Radical::query()->insert($chunk);
         }
+        echo "Успех\n";
     }
 
     public static function addRelationshipsRadicalsKanjis(string $path) : void
     {
-        $contents = File::get(base_path($path));
-        $json = json_decode($contents, true);
-        $arrayRadicals = self::getArrayFromJsonRadicals($json);
-        Radical::each(function (Radical $radical) {
-            $radical->kanjis()->sync(Kanji::whereIn('character', explode(" ", $radical['kanjis']))->pluck('id'));
+        Radical::query()->each(function (Radical $radical) {
+            $radical->kanjis()->sync(Kanji::query()->whereIn('character', explode(" ", $radical['kanjis']))->pluck('id'));
         });
-
-
+        echo "Успех\n";
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Exercise;
 
 use App\Http\Controllers\Controller;
+use App\Models\Exercise;
 use App\Models\JapaneseGrammarExercise;
 use App\Models\Kanji;
 use App\Models\User;
@@ -17,19 +18,19 @@ class StoreController extends Controller
     {
         //dd(JapaneseGrammarExercise::where('id', $request['id'])->first()['answer']);
 
-        if(strcasecmp($request['optionText'], JapaneseGrammarExercise::where('id', $request['id'])->first()['answer'])){
+        if(strcasecmp($request['optionText'], Exercise::where('id', $request['id'])->first()['answer'])){
             dd("Неверный ответ");
         }
-        $user = User::where('id', Auth::user()->id)->first();
-        $record = DB::table('japanese_grammar_exercises_users_progress')
-            ->where('user_id', Auth::user()->id)
+        $user = User::where('id', Auth::id())->first();
+        $record = DB::table('exercises_users_progress')
+            ->where('user_id', Auth::id())
             ->where('japanese_grammar_exercise_id', $request['id'])
             ->first();
 
         if ($record) {
             // Увеличиваем значение поля progress на 1
-            DB::table('japanese_grammar_exercises_users_progress')
-                ->where('user_id', Auth::user()->id)
+            DB::table('exercises_users_progress')
+                ->where('user_id', Auth::id())
                 ->where('japanese_grammar_exercise_id', $request['id'])
                 ->increment('progress', 1);
         }

@@ -11,19 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('japanese_grammar_exercises_users_progress', function (Blueprint $table) {
+        Schema::create('exercises_users_progress', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('japanese_grammar_exercise_id');
+            $table->unsignedBigInteger('exercise_id');
             $table->unsignedTinyInteger('progress')->default(0);
             $table->timestamps();
 
-            $table->index('japanese_grammar_exercise_id', 'japanese_grammar_exercise_user_japanese_grammar_exercise_idx');
-            $table->index('user_id', 'japanese_grammar_exercise_user_user_idx');
+            $table->index('exercise_id', 'exercise_user_exercise_idx');
+            $table->index('user_id', 'exercise_user_user_idx');
 
-            $table->foreign('japanese_grammar_exercise_id', 'user_japanese_grammar_exercise_japanese_grammar_exercise_fk')->on('japanese_grammar_exercises')->references('id');
-            $table->foreign('user_id', 'user_japanese_grammar_exercise_user_fk')->on('users')->references('id');
+            $table->foreign('exercise_id', 'user_exercise_exercise_fk')->on('exercises')->references('id');
+            $table->foreign('user_id', 'user_exercise_user_fk')->on('users')->references('id');
         });
     }
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('japanese_grammar_exercises_users_progress');
+        Schema::dropIfExists('_exercises_users_progress');
     }
 };
