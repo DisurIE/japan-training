@@ -2,16 +2,20 @@
 
 namespace App\Kanji\Queries;
 
-use App\Http\Requests\KanjiRequest;
 use App\Models\Kanji;
+use App\Http\Requests\KanjiRequest;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
 
 class KanjiQueries
 {
-    public function createKanji(KanjiRequest $request): ?Model
+    public function createKanji(KanjiRequest $request): ?Kanji
     {
-        return Kanji::query()->create($request->validated());
+        return Kanji::create($request->validated());
+    }
+
+    public function getById(int $id): ?Kanji
+    {
+        return Kanji::whereId($id)->first();
     }
 
     public function getAll(): Collection

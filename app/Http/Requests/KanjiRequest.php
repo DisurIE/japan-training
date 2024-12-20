@@ -22,12 +22,13 @@ class KanjiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'character' => ['required'],
-            'meaning' => 'required',
-            'onyomi' => 'required',
-            'kunyomi' => 'required',
+            'id'                => ['nullable', 'integer', 'exists:kanjis,id'],
+            'character'         => ['required'],
+            'meaning'           => 'required',
+            'onyomi'            => 'required',
+            'kunyomi'           => 'required',
             'important_reading' => 'required',
-            'level' => ['required', 'numeric'],
+            'level'             => ['required', 'numeric'],
         ];
     }
 }

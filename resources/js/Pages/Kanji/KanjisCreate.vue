@@ -19,6 +19,7 @@ export default {
         let $data = null;
         if(props.kanji !== undefined) {
             form = useForm({
+                id: props.kanji.id,
                 character: props.kanji.character,
                 meaning: props.kanji.meaning,
                 onyomi: props.kanji.onyomi,
@@ -29,6 +30,7 @@ export default {
             $path = `/kanjis/${props.kanji.id}`
             $data = {
                 _method: "put",
+                id: form.id,
                 character: form.character,
                 meaning: form.meaning,
                 onyomi: form.onyomi,
