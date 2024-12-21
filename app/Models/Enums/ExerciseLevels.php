@@ -13,5 +13,4 @@ enum ExerciseLevels: string
     case N3 = 'N3';
     case N4 = 'N4';
     case N5 = 'N5';
-
 }

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('character')->unique();
             $table->string('meaning');
             $table->string('reading');
-            $table->string('image')->nullable();
+            $table->string('image_id')->nullable();
             $table->string('kanjis')->nullable();
             $table->unsignedTinyInteger('strokes')->nullable();
             $table->timestamps();

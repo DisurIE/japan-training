@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ExerciseOption extends Model
 {
@@ -14,7 +15,8 @@ class ExerciseOption extends Model
         'option_text'
     ];
 
-    public function exercise(){
+    public function exercise(): BelongsTo
+    {
         return $this->belongsTo(Exercise::class, 'exercise_id');
     }
 }

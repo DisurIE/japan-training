@@ -52,9 +52,9 @@ class User extends Authenticatable
             ->withTimestamps();
     }
 
-    public function japaneseGrammarExercisesProgress() : belongsToMany
+    public function exercisesProgress() : belongsToMany
     {
-        return $this->belongsToMany(Exercise::class, 'japanese_grammar_exercises_users_progress')
+        return $this->belongsToMany(Exercise::class, 'user_exercise_progress')
             ->withPivot('progress')
             ->withTimestamps();
     }
